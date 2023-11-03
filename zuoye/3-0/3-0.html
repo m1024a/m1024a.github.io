@@ -1,0 +1,195 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+    <link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-webfont@1.1.0/lxgwwenkai-regular.css" />
+<link href="../../jQueryAssets/jquery.ui.core.min.css" rel="stylesheet" type="text/css">
+<link href="../../jQueryAssets/jquery.ui.theme.min.css" rel="stylesheet" type="text/css">
+<link href="../../jQueryAssets/jquery.ui.tabs.min.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+* {
+	font-family: LXGW WenKai;
+	font-weight: bold;
+}
+#Tabs1 {
+	height: 100%;
+	width: 1000px;
+	margin-left: 0px;
+}
+#Tabs1 #tabs-1 {
+	overflow-y: scroll;
+	height: 650px;
+	background-color: #FFFFD2;
+	font-size: 180%;
+}
+#Tabs1 #tabs-2 {
+overflow-y: scroll;
+	height: 650px;
+	background-color: #FFFFD2;
+	font-size: 180%;
+}
+#Tabs1 #tabs-3 {
+	overflow-y: scroll;
+	height: 650px;
+	background-color: #FFFFD2;
+	font-size: 180%;
+}
+.bt {
+	width: 100%;
+	height: 100%;
+	font-size: 250%;
+	font-weight: bolder;
+	padding-top: 20px;
+background-color: blueviolet;
+	border-radius: 10px;
+	color: #FFFFFF;
+	    opacity: 0.7;
+
+}
+#bq {
+	background-color: rgb(218, 218, 218);
+    opacity: 0.7;
+}
+.text {
+	text-indent: 2em;
+	font-size: 70%;
+}
+</style>
+<script src="../../jQueryAssets/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="../../jQueryAssets/jquery-ui-1.9.2.tabs.custom.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+<br>
+<table width="1000" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <td height="80" align="center" valign="middle" bgcolor="#FFFFFF"><div class="bt">项目三 网页元素的插入和设置</div></td>
+    </tr>
+    <tr>
+      <td height="650" valign="top"><div id="Tabs1">
+        <ul>
+          <li><a href="#tabs-1"> 图像编辑</a></li>
+          <li><a href="#tabs-2">文本处理</a></li>
+          <li><a href="#tabs-3">多媒体</a></li>
+        </ul>
+        <div id="tabs-1">
+          <p>1.1 常用的图像格式</p>
+          <p class="text">目前在网页中可以使用的图像包括JPEG，GIF和PNG格式，下面分别列出了他们各自的特点：</p>
+          <p class="text">JPEG格式：适于表现色彩丰富，具有连续色调的图像，如各种照片。</p>
+          <p class="text">GIF格式：最多只能包含256种颜色，适合表现色调不连续或具有大面积单一颜色的图像。</p>
+          <p class="text">PNG格式：集JPEG和GIF格式的优点于一身，既能处理照片式的精美图像，又能包含透明区域，且可以包含图层等信息，是Fireworks的默认图像格式。</p>
+          <p>1.2 插入与编辑图像</p>
+          <p class="text">在Dreamweaver CC中插入图像的方法非常简单。</p>
+          <p class="text">a.首先在要插入图像的位置单击确定插入点，然后单击“常用”插入栏中的“图像”按钮，打开“选择图像源文件”对话框，从中选择要插入的图像，然后单击“确定”按钮即可。</p>
+          <p class="text">b.在要插入图像的位置单机确定插入点，然后单机插入-图像，打开“选择图像源文件”对话框，从中选择要插入的图像，然后单击“确定”按钮即可</p>
+          <p class="text">c.快捷键Ctrl+Alt+I</p>
+          <p>1.3 图像占位符</p>
+          <p class="text">在制作网页时，若想要插入一幅图像，但暂时没有找到合适的图像，这就需要用到图像占位符。插入图像占位符后，用户可随时替换为真正的图像。</p>
+          <p>1.3.1 插入图像占位符</p>
+          <p class="text">选择要插入的位置，点击插入→图像对象→图像占位符，打开“图像占位符”对话框，在“名称”中输入该占位符标签，必须以字母开头，并且只能包含字母和数字，不能使用空格。在“替换文本”中输入描述该图像的文本。</p>
+          <p>1.3.2 将图像占位符替换为图像</p>
+          <p class="text">通过底部属性面板可以将图像中占位符替换为真正的图像。在“源文件”处浏览图像所在位置，点击图像，再点击“确定”即可。</p>
+          <p class="text">技术专题：预览网页时不显示图像的问题</p>
+          <p class="text">这种情况有两种可能：</p>
+          <p class="text">图像使用的是绝对路径：如果如想使用的是绝对路径，并且路径用了本地盘符，则上传后就找不到图像文件。打开“属性”面板，发现图像的“源文件”显示为“file:F:Web/img/1.gif”，这就是绝对路径。若要使用相对路径，就改为“img/1.gif”</p>
+          <p class="text">大小写问题提：图形文件名或图形文件所在的目录名中有大写字母或中文。因为服务器所在的操作系统一般是UNIX或Linux平台，而UNIX系统是区分文件大小写的。</p>
+          <p>1.4 交互式图像</p>
+          <p class="text">交互式图像又名鼠标经过图像，是指当鼠标经过衣服图像时，它会变成另一副图像，并且带有连接功能。因此导航条图像要由两幅图像组成。</p>
+          <p class="text">点击插入→图像对象→鼠标经过图像，打开“插图鼠标经过图像”对话框。填入对应的图像路径即可。</p>
+          <p class="text">由于交换的图像会进行压缩或展开以适应原有图像的尺寸，这样容易造成图像失真，所以尽量选择尺寸一致的图像</p>
+          <p>1.5 网页背景</p>
+          <p>1.5.1 设置网页背景颜色</p>
+          <p class="text">点击修改→页面属性，或在“属性”面板中点击“页面属性”打开“页面属性”对话框，在“背景颜色”处选择背景颜色。</p>
+          <p>1.5.2 设置网页背景</p>
+          <p class="text">在“页面属性”的“背景图像”中选择图片的路径，点击确定即可。</p>
+          <p>1.6 设置外部图像编辑器</p>
+          <p class="text">当把选择好的图片插入Dreamweaver CC中时，可能这些图片达不到你想要的效果，这时就需要对图像进行编辑，Dreamweaver CC虽然可以设置图像属性，但毕竟不是专门的图像编辑软件，这时就需要用到外部图像编辑器来对图像源文件进行处理。</p>
+          <p class="text">步骤：</p>
+          <p class="text">a.点击编辑→首选参数，打开“首选参数”对话框，在左侧选择“文件类型/编辑器”。</p>
+          <p class="text">b.在“拓展名”列表中可以添加或删除文件类型。</p>
+          <p class="text">c.选中一种文件类型，在编辑器中点击“+”号</p>
+          <p class="text">d.选择想用的图像编辑软件。</p>
+          <p class="text">e.选中图像编辑器，点击设为主要</p>
+          <p class="text">f.选中图像，在底部“属性”面板中点击编辑即可使用外部图像编辑器了。</p>
+          <p>1.7 图像映射</p>
+          <p class="text">图像映射又名“热点链接”，是将图像划分为若干个区域，每个区域被称为一个热区，每个热区分别设置不同的超链接。热区可以是不同形状。</p>
+          <p class="text">设置图像映射：</p>
+          <p class="text">选中图像，在“属性面板”左下角“矩形热点工具”，“圆形热点工具”，“多边形热点工具”。</p>
+          <p class="text">点击任意工具，在图像上选择一片区域创建热区。</p>
+          <p class="text">可以在“替换”中输入文字说明或提示。在浏览器中，当鼠标指向该热区时就会显示此处输入的文字。</p>
+          <p class="text">保存文件，按F12预览即可查看。</p>
+          <p class="text">若要选择多个热区，可点击“属性”面板的“指针热点工具”然后按住Shift，对热区进行选择。或者全选Ctrl+A。</p>
+        </div>
+        <div id="tabs-2">
+          <p>2.1 输入文本          
+          <p class="text"> a.在 Dreamweaver CC 中输人文本的方法非常简单，只要将插入点定位在网页的某个位置，然后输入文本就可以了。          
+          <p class="text"> b.对于大量的外部文本，用户可利用剪贴板将其拷贝到网页文档中。          
+          <p> 2.2设置文本的段落格式和字符格式
+            <p class="text">默认情况下,输入文本的字体、字号等,与该网页&ldquo;页面属性&rdquo;中设置的相同。用户也可利用&ldquo;属性&rdquo;面板为文本设置系统提供的格式化样式(段落、标题 1、标题 2 等),或者直接设置所选文本的字体、大小、颜色、粗体、斜体、对齐方式和列表方式等 
+            <p>2.3添加空格            
+            <p class="text"> 默认情况下，在 Dreamweave 中添加空格时若直接在文档窗口中选中文本,并按下键盘上的空格键只能输入一个空格，连续按下空格键光标将不会向后移动            
+            <p class="text">连续输入空格的几种方法:
+            <p class="text">A.按下Ctrl+Shift+空格键即可在网页中输入连续的空格            
+            <p class="text">B.在插入面板中切换文本分类，然后单击该分类中最后一个按钮，在弹出的下拉列表中选中不换行空格选项即可实现空格的连续输入            
+            <p class="text">C.在代码视图中合适的位置上输人“&amp;nbsp”可以为网页文本添加1个空格，若需要<br>
+              连续多个空格,可以使用“;”,将若于个“&amp;nbsp'分开,从而实现连续空格键的输入。
+            <p >2.4水平线和特殊字符
+            <p class="text">如果网页文档由很长的内容构成，可在内容中间插人水平线,从而使网页内容更容易理解，阅
+              读起来也更轻松。要插入水亚线，先将插人点定位在要插入水平线的位置,然后选择“插入记录”&gt;“HTML”&gt;“水平线”菜单即可。
+            <p class="text">要插入特殊字符,可以选择“插入记录”&gt;“HTML”&gt;“特殊字符”菜单，然后在弹出的菜单中选择相应的殊字符，如果在“特殊字符”菜单下没有找到需要的特殊字符，可以通过选择该菜单中最下面的“其他字符”命令打开“插入其他字符”对话框。
+            <p>2.5，项目列表
+            <p>2.5.1 无序列表            
+            <p class="text">无序列表指的是以“。”“””等符号开头，并且没有顺序的列表项目。无序列表中通常不会有顺序级别的区别，只在文字的签名使用一个项目符号作为每个列表项的前缀。            
+            <p >2.5.2 有有序列表            
+            <p class="text">有序列表以数字或英文字母开头，并且每个项目都会有先后顺序。            
+            <p >2.5.3 定义项目列表            
+            <p class="text">编号列表和项目前导符还可以自行编辑。            
+            <p class="text">列表属性对话框主要参数选项的具体作用             
+            <p class="text">a.列表类型下拉列表:可以选择列表类型            
+            <p class="text">b.样式下拉列表:设置选择的列表样式。            
+            <p class="text">c.新建样式下拉列表:可以选择列表的项目样式。            
+            <p class="text">d.开始计数文本框:可以设置编号列表的起始编号数字，只结编号列表作用。            
+            <p class="text">e.重设文档框:可以重新设施编号列表编号数字，只对编号列表作用。<br>
+              
+            </div>
+        <div id="tabs-3">
+          <p >3.1 认识多媒体</p>
+          <p class="text">多媒体技术是一种把文本(Text)、图像(Images)、动画(Animation)、声音(Sound)结合在一起，通过计算机进行综合处理和控制，能支持完成一系列交互式操作的信息技术。</p>
+          <p>3.2 插入 Shockwave 影片</p>
+          <p class="text">Shockwave已于2019年4月9日停止使用，再见了旧时代。</p>
+          <p >3.3 插入Flash动画</p>
+          <p class="text">Flash是矢量化的web交互式动画制作工具。</p>
+          <p class="text">将光标放在要插入的位置，点击 插人一&gt; 媒体-&gt; SWF 或快捷键 Ctrl+ Alt+F,打开“选择SWF”对话框，选择相应文件。</p>
+          <p class="text">在“属性”面板的“Wmode”中可以将 Flash动画的背景设为透明。</p>
+          <p class="text">SWF 文件的属性面板主要参数选项的具体作用:</p>
+          <p class="text">ID:在左侧的标记文本框中可以输人 SWF 文件的唯一ID 名称。</p>
+          <p class="text">[宽]和[高]文本框:可以在文本框中输人以像素为单位的宽和高指定影片的宽度和高度。</p>
+          <p class="text">[文件]文本框:指定 SWF 文件的路径。单击文件夹按钮选择文件,也可以直接输入路径</p>
+          <p class="text">[背景颜色] 文本框:指定动画区域的背景颜色，在不播放动画时也显示此颜色。</p>
+          <p class="text">[编辑]按钮:单击该按钮，启动 Fash 来修改FLA 文件。如果计算机上没有安装 Flash，则会大</p>
+          <p class="text">[类]下拉列表:可用于对影片应用 CSS类循环]复选框:选中该复选框，可以连续播放动画。如果有选择循环,则影片将播放一次，然后停止。</p>
+          <p class="text">[自动播放]按钮:选中该复选框,在加载页面时自动播放影片。</p>
+          <p class="text">[垂直边距]和[水平边距]文本框:可以指定影片上、下、左、右空白区域大小的像素数。</p>
+          <p class="text">[品质]下拉列表:在影片播放期间控制失真高品质设置可改善影片的外观。但高品质设置的影片需要较快的处理器才能在屏幕上正确呈现。低品质设置首先会照顾到显示速度,然后才考虑外观，而高品质设置首先照顾到外观，然后才考虑显示速度。自动低品质会首先照顾到显示速度但会在可能的情况下改善外观。自动高品质开始时会同时照顾显示速度和外观，但以后可能会根据需要牺牲外观以确保速度</p>
+          <p class="text">[比例]下拉列表：设置影片如何在适合宽度和高度文本框中设置的尺寸。默认设置为显示整个影片。</p>
+          <p class="text">[对齐] 下拉列表:设置影片在页面上的对齐方式。</p>
+          <p class="text">W mode 选项:为SWF文件设置 Wmode参数以避免与 DHTML元素(例如 Spry 构件相冲突。默认值是不透明,这样自刚觉器中,DHTMIL元素就可以显水在 SWF件的上面，如 SWF包括透明度，并且希望DHTML元素显示在他们后面，可以选择[透明]选项。选择[窗口]选项可以从代码中删除W mode参数并允SWF文件显示在其他DHTML元素上面。</p>
+          <p class="text">&nbsp;</p>
+        </div>
+      </div></td>
+    </tr>
+    <tr>
+      <td height="77" align="center"  id="bq">---- 数字媒体©版权所有 ----</td>
+    </tr>
+  </tbody>
+</table>
+<script type="text/javascript">
+$(function() {
+	$( "#Tabs1" ).tabs(); 
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <title>个人主页</title>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="apple-mobile-app-capable" content="yes">
+    <meta name="apple-mobile-app-status-bar-style" content="black">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="cononico">
+    <meta name="application-name" content="Cononico">
+    <link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-webfont@1.1.0/lxgwwenkai-regular.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/process.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="./css/css.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+    <!-- bizhi -->
+    <script type="text/javascript">
+        //设定rem值
+        document.getElementsByTagName("html")[0].style.fontSize = document.documentElement.clientWidth / 20 + 'px';
+    </script>
+    <script class="tx">
+        (function () {
+            var a_idx = 0;
+            window.onclick = function (event) {
+                var a = new Array("❤富强❤", "❤民主❤", "❤文明❤", "❤和谐❤", "❤自由❤", "❤平等❤", "❤公正❤", "❤法治❤", "❤爱国❤",
+                    "❤敬业❤", "❤诚信❤", "❤友善❤");
+                var heart = document.createElement("b"); //创建b元素
+                heart.onselectstart = new Function('event.returnValue=false'); //防止拖动
+
+                document.body.appendChild(heart).innerHTML = a[a_idx]; //将b元素添加到页面上
+                a_idx = (a_idx + 1) % a.length;
+                heart.style.cssText = "position: fixed;left:-100%;"; //给p元素设置样式
+
+                var f = 20, // 字体大小
+                    x = event.clientX - f / 2 - 30, // 横坐标
+                    y = event.clientY - f, // 纵坐标
+                    c = randomColor(), // 随机颜色
+                    a = 1, // 透明度
+                    s = 1; // 放大缩小
+
+                var timer = setInterval(function () { //添加定时器
+                    if (a <= 0) {
+                        document.body.removeChild(heart);
+                        clearInterval(timer);
+                    } else {
+                        heart.style.cssText = "font-size:16px;cursor: default;position: fixed;color:" +
+                            c + ";left:" + x + "px;top:" + y + "px;opacity:" + a + ";transform:scale(" +
+                            s + ");";
+
+                        y--;
+                        a -= 0.016;
+                        s += 0.002;
+                    }
+                }, 15)
+            }
+            // 随机颜色
+            function randomColor() {
+                return "rgb(" + (~~(Math.random() * 255)) + "," + (~~(Math.random() * 255)) + "," + (~~(Math
+                    .random() * 255)) + ")";
+            }
+        }());
+    </script>
+    <style>
+        * {
+            font-family: LXGW WenKai
+        }
+
+        * {
+            font-weight: bold
+        }
+
+        body {
+            font-family: LXGW WenKai;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- bizhi -->
+    <canvas id="canvas" width="1400" height="600"></canvas>
+    <script src="./js/js.js"></script>
+    <header class="head">
+        <div class="head_logo_div">
+            <!-- 头像 -->
+            <img class="logo_img" src="images/upload/head.jpg"></a>
+        </div>
+        <div class="head_nav_div">
+            <nav class="head_nav">
+                <ul id="nav_ul">
+                    <a href="https://www.uy5.net/">
+                        <li>克隆窝</li>
+                    </a>
+                    <a href="https://192.168.1.24:8888/">
+                        <li>管理</li>
+                    </a>
+                    <a href="./win12/desktop.html">
+                        <li>Win 12</li>
+                    </a>
+                    <a href="https://www.w3school.com.cn/">
+                        <li>W3School</li>
+                    </a>
+                </ul>
+            </nav>
+        </div>
+        <div class="clear"></div>
+    </header>
+    <div class="wrapBox" id="wrapBox">
+        <div class="box">
+            <!-- 壁纸 -->
+            <!-- <img class="box_bg" src="images/upload/pic_1.jpg"> -->
+            <div class="box01_content">
+                <div class="head_div">
+                    <div class="cycle_item">
+                        <!-- 博客----主页 -->
+                        <a href="./inde/inde/index.html" class="github_a" id="github_a" target="_blank">
+                            <span class="github_icon"></span>
+                            <span class="github_text">
+                                <p class="item_name">测试</p>
+                            </span>
+                        </a>
+                        <!-- 微博----作业 -->
+                        <a href="./inde/zuoye/index.html" class="weibo_a" id="weibo_a" target="_blank">
+                            <span class="weibo_icon"></span>
+                            <span class="weibo_text">
+                                <p class="item_name">作业</p>
+                            </span>
+                        </a>
+                        <!-- 博客-----主页 -->
+                        <a href="./inde/inde.html" class="blog_a" id="blog_a" target="_blank">
+                            <span class="blog_icon"></span>
+                            <span class="blog_text">
+                                <p class="item_name">主页</p>
+                            </span>
+                        </a>
+
+                        <div class="green_cycle">
+                            <img class="green_cycle_img" src="images/icon/green_cycle.svg">
+                            <div class="yellow_cycle">
+                                <img class="yellow_cycle_img" src="images/icon/yellow_cycle.svg">
+                                <div class="blue_cycle">
+                                    <img class="blue_cycle_img" src="images/icon/blue_cycle.svg">
+                                    <div class="head_img_div">
+                                        <img class="head_img" src="images/upload/head.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h1 class="title">黑夜</h1>
+                <h2 class="title_h2">千里之行，始于足下</h2>
+                <div id="box01_text">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/main.js"></script>
+    <style>
+        .copyrights {
+            text-indent: -9999px;
+            height: 0;
+            line-height: 0;
+            font-size: 0;
+            overflow: hidden;
+        }
+    </style>
+
+</body>
+
+</html>

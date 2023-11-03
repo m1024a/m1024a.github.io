@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>例1</title>
+    <style>
+        .timu {
+            /* div颜色 */
+            background-color: blueviolet;
+            /* 内边距 */
+            padding: 10px;
+            /* 圆角 */
+            border-radius: 10px;
+            /* 字体大小 */
+            font-size: 200%;
+            /* 字体加粗 */
+            font-weight: bolder;
+            /* 鼠标样式（选中） */
+            cursor: pointer;
+        }
+
+        .timu div {
+            color: aqua;
+            background-color: brown;
+            padding: 15px;
+            margin-top: 10px;
+            border-radius: 15px;
+
+        }
+
+        .timu div:hover {
+            color: black;
+            background-color: aliceblue;
+            /* 鼠标样式（十字光标） */
+            cursor: crosshair;
+        }
+
+        /* .timu .daan {
+            background-color: brown;
+            color: yellow;
+            display: none;（弃用）
+        } */
+
+        body {
+            font-family: LXGW WenKai;
+        }
+
+        .bac {
+            background-color: aqua;
+            padding: 20px;
+        }
+
+        .ck {
+            color: aliceblue;
+            /* 定位方式 */
+            position: fixed;
+            background-color: cornflowerblue;
+            width: 200px;
+            height: 200px;
+            font-size: 150%;
+            border-radius: 8px;
+            left: 45%;
+            top: 45%;
+            font-weight: bold;
+            /* 整体放大 */
+            transform: scale(1.5);
+            /* 默认为打开 设置为关闭 */
+            display: none;
+        }
+
+        .ck .bt {
+            color: black;
+            width: 200px;
+            background-color: darkgray;
+            border-radius: 8px;
+
+        }
+
+        .ck .bt button {
+            float: right;
+            width: 25px;
+            height: 25px;
+            margin-top: 4px;
+            margin-right: 4px;
+        }
+
+        /* 替换图片的属性 */
+        .ck img {
+            width: 180px;
+            height: 120px;
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-left: 10px;
+            border-radius: 5px;
+            /* 图片透明度 */
+            filter: opacity(90%)
+        }
+
+        .jishu {
+            color: rgb(255, 255, 255);
+            background-color: rgb(107, 7, 7);
+            position: fixed;
+            width: 200px;
+            height: 120px;
+            border-radius: 10px;
+            padding: 5px;
+            font-size: 180%;
+            font-weight: bolder;
+            right: 0;
+        }
+    </style>
+    <link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-webfont@1.1.0/lxgwwenkai-regular.css" />
+
+
+
+</head>
+
+<body>
+    <div class="jishu">
+        <div>答对：<span id="dui">0</span>次</div>
+        <div>答错：<span id="cuo">0</span>次</div>
+        <button class="cz">重置</button>
+    </div>
+    <div class="ck">
+        <div class="bt">标题<button>x</button></div>
+        <span></span>
+        <img src="gz.gif" alt="">
+    </div>
+
+
+
+    <div class="timu">
+        [例1]本地站点的所有文件和文件夹必须使用____，否则在上传到因特网上时可能导致浏览不正常。
+        <div da="1">A.小写字母</div>
+        <div>B.大写字母</div>
+        <div>C.数字</div>
+        <div>D.汉字</div>
+        <!-- <div class="daan">答案：A</div> -->
+    </div>
+    <br>
+    <div class="timu">
+        [例2]插入“水平线”后，要更改水平线颜色为红色，应该____。
+        <div>A.在属性面板更改颜色</div>
+        <div>B.在文件面板上更改颜色</div>
+        <div da="1">C.选中水平线，在编辑标签代码中输入“color=red”(color="#ff000")</div>
+        <div>D.选中水平线，在编辑标签代码中输入“border color=red”</div>
+        <!-- <div class="daan">答案：C</div> -->
+
+    </div>
+    <br>
+    <div class="timu">
+        [例3]Dreamweaver CC是____公司开发的集网页制作和网站管理于一身的所见即所得网页编辑器。
+        <div>A.APPLE</div>
+        <div>B.DREAMWORK</div>
+        <div da="1">C.MACROMEDIA</div>
+        <div>D.MICROSOFT</div>
+        <!-- <div class="daan">答案：C</div> -->
+    </div>
+    <br>
+    <div class="timu">
+        [例4]下述哪个工具可以编写网页？
+        <div>A.FireWork</div>
+        <div>B.AutoCAD</div>
+        <div>C.Photoshop CC</div>
+        <div da="1">D.记事本</div>
+        <!-- <div class="daan">答案：D</div> -->
+    </div>
+    <br>
+    <div class="timu">
+        [例5]要将样式信息作为文档的一部分用于HTML，定义样式时使用的标记是____。
+        <div>A.href</div>
+        <div>B.class</div>
+        <div>C.link</div>
+        <div da="1">D.style</div>
+        <!-- <div class="daan">答案：D</div> -->
+    </div>
+    <br>
+    <div class="timu">
+        [例6]在HTML中，____是网页标题标记。
+        <div>A.head</div>
+        <div da="1">B.title</div>
+        <div>C.hr</div>
+        <div>D.body</div>
+        <!-- <div class="daan">答案：B</div> -->
+    </div>
+    <br>
+    <div class="timu">
+        [例7]在定义样式时，要将样式定义的内容放在____标记中。
+        <div>A.<>
+        </div>
+        <div>B.()</div>
+        <div da="1">C.{}</div>
+        <div>D. script /script
+        </div>
+        <!-- <div class="daan">答案：C</div> -->
+    </div>
+    <br>
+    <div class="timu">
+        [例8]在网页中插入背景音乐时，使用的是____标记。
+        <div>A.file</div>
+        <div da="1">B.bgsound</div>
+        <div>C.mid</div>
+        <div>D.src</div>
+    </div>
+    <br>
+    <div class="timu">
+        [例9]在HTML中，（）是表格使用的标记____
+        <div>A.&lt;ul&gt;</div>
+        <div da="1">B.&lt;table&gt;</div>
+        <div>C.&lt;tr&gt;</div>
+        <div>D.&lt;td&gt;</div>
+
+    </div>
+    <br>
+    <div class="timu">
+        [例10]图像热点是为图像设定互动效果的工作区域，与其有关描述正确的是_____
+        <div da="1">A.一幅图像上可应用多个热点</div>
+        <div>B.图像热点不能是任意形状的</div>
+        <div>C.一幅图像上只可应用一个热点</div>
+        <div>D.一幅图像上只可应用五个热点</div>
+
+    </div>
+    <br>
+    <div class="timu">
+        [例11]使用框架技术将一个浏览器窗口分割成上中下三个区域，分别加载top.html,middle.html和bottom.html三个页面，则该框架集共有_____个页面构成。
+        <div>A.3个</div>
+        <div da="1">B.4个</div>
+        <div>C.5个</div>
+        <div>D.6个</div>
+    </div>
+    <br>
+    <div class="timu">
+        [例12]以下____属于WWW客户程序
+        <div da="1">A.Internet Explorer</div>
+        <div da="1">B.Netscape Navigator</div>
+        <div>C.Winzip</div>
+        <div>D.WinRAR</div>
+
+    </div>
+    <br>
+    <div class="timu">
+        [例13]在HTML文件中，使用绝对地址链接文件____
+        <div da="1">A.主要用来链接其它网站的网页</div>
+        <div>B.主要用来链接当前网站中的网页</div>
+        <div da="1">C.须直接写出链接文件服务器位置</div>
+        <div>D.须直接写出链接文件相对于目前网页的位置</div>
+
+    </div>
+    <br>
+    <div class="timu">
+        [例14]____什么能够用来制作网页
+        <div da="1">A.Dreamweaver CC</div>
+        <div da="1">B.Frontpage</div>
+        <div>C.Flash MX</div>
+        <div>D.Photoshop CC</div>
+    </div>
+    <br>
+    <div class="timu">
+        [例15]下列哪个不属于网页制作工具____
+        <div da="1">A.Flash</div>
+        <div>B.FrontPage2000</div>
+        <div>C.Dreamweaver CC</div>
+        <div>D.FrontPage Express</div>
+    </div>
+    <br>
+    <div class="timu">
+        [例16]在HTML中，表格每行每列的标记是____
+        <div da="1">A.&lt;td&gt;</div>
+        <div>B.&lt;tr&gt;</div>
+        <div>C.&lt;p&gt;</div>
+        <div>D.&lt;font&gt;</div>
+    </div>
+    <br>
+    <div class="timu">
+        [例17]使用外部样式文件需要在文档的头部区域使用的标记是____
+        <div da="1">A.&lt;link&gt;</div>
+        <div>B.&lt;class&gt;</div>
+        <div>C.&lt;style&gt;</div>
+        <div>D.&lt;a&gt;</div>
+    </div>
+    <br>
+    <div class="timu">
+        [例18]在HTML中，____是网页主体的标记
+        <div>A.&lt;head&gt;</div>
+        <div>B.&lt;title&gt;</div>
+        <div>C.&lt;html&gt;</div>
+        <div da="1">D.&lt;body&gt;</div>
+    </div>
+    <br>
+    <div class="timu">
+        [例19]HTML,文档结构由____组成
+        <div da="1">A.&lt;html&gt;...&lt;/html&gt;,&lt;head&gt;...&lt;/head&gt;,&lt;body&gt;...&lt;/body&gt;</div>
+        <div>B.&lt;html&gt;...&lt;/html&gt;&lt;body&gt;...&lt;/body&gt;&lt;&gt;</div>
+        <div>C.&lt;body&gt;,&lt;/body&gt;</div>
+        <div>D.&lt;html&gt;,&lt;/html&gt;</div>
+    </div>
+    <br>
+    <div class="timu">
+        [例20]外部样式文件的后缀名是____
+        <div da="1">A.CSS</div>
+        <div>B.html</div>
+        <div>C.htm</div>
+        <div>D.asp</div>
+    </div>
+    <br>
+    <div class="timu">
+        [例21]下面说法正确的是
+        <div>A.HTML文档包括可执行文件的二进制信息</div>
+        <div da="1">B.HTML文档由ASCII字符组成</div>
+        <div>C.HTML语言标签都是成对的</div>
+        <div>D.HTML语言有条件判断语句</div>
+    </div>
+    <br>
+    <div class="timu">
+        [例22]下面那个不是浏览器软件____
+        <div da="1">A.Nero</div>
+        <div>B.Firefox</div>
+        <div>C.Internet Explorer</div>
+        <div>D.Opear</div>
+    </div>
+    <br>
+    <div class="timu">
+        [例23]WWW是指____
+        <div>A.World Wide Wait</div>
+        <div>B.Web Wide World</div>
+        <div da="1">C.World Wide Web</div>
+        <div>D.World Wade Web</div>
+    </div>
+    <br>
+    <div class="timu">
+        [例24]下属对HTML的描述不正确的是____
+        <div>A.通过HTML可以连接互联网上所有资源</div>
+        <div>B.可被任何文本编辑器读取</div>
+        <div>C.可用于各种不同的操作系统上</div>
+        <div da="1">D.HTML标签只能成对出现</div>
+    </div>
+    <br>
+    <div class="timu">
+        [例25]通常主页被命名为____
+        <div>A.zhuye.htm</div>
+        <div>B.webpage.htm</div>
+        <div da="1">C.index.htm</div>
+        <div>D.main.htm</div>
+    </div>
+    <br>
+    <div class="timu">
+        [例26]通用图像格式GIF最多可以使用的颜色数____
+        <div>A.16色</div>
+        <div>B.216色</div>
+        <div da="1">C.256色</div>
+        <div>D.512色</div>
+    </div>
+    <br>
+    <div class="timu">
+        [例27]在网页中可以嵌入的声音文件扩展名为____
+        <div da="1">A..wav</div>
+        <div>B..doc</div>
+        <div>C..ppt</div>
+        <div>D..txt</div>
+    </div>
+    <br>
+    <div class="timu">
+        [例28]可以在网页中嵌入动画或影片的扩展名为____
+        <div da="1">A..mpg</div>
+        <div>B..doc</div>
+        <div>C..ppt</div>
+        <div>D..txt</div>
+    </div>
+    <br>
+    <div class="timu">
+        [例29]用Dreamweaver CC制作网页时，有____视图方式
+        <div>A.5种</div>
+        <div>B.4种</div>
+        <div da="1">C.3种</div>
+        <div>D.2种</div>
+    </div>
+    <br>
+    <div class="timu">
+        [例30]关于超链接的说法中，不正确的是____
+        <div>A.超链接可以反映网页内部各个位置之间的联系</div>
+        <div>B.超链接可以反映网页之间的联系</div>
+        <div>C.文字形式的超链接自动带有下划线</div>
+        <div da="1">D.图象形式的超链接自动改变颜色</div>
+    </div>
+    <br>
+    <div class="timu">
+        [例31]关于网页中超链接的说法不正确的是____
+        <div>A.超链接可以使用户转移到另一个网页</div>
+        <div>B.网页中的超链接可以指向其他网站</div>
+        <div>C.超链接的载体可以是图像</div>
+        <div da="1">D.超链接可以自动生成</div>
+    </div>
+    <br>
+    <div class="timu">
+        [例32]____不能用来制作网页
+        <div>A.记事本</div>
+        <div>B.Dreamweaver CC</div>
+        <div da="1">C.Photoshop CC</div>
+        <div>D.写字板</div>
+    </div>
+    <br>
+    <div class="timu">
+        [例33]在网页的保存类型中，_____是按照原始格式保存并可以脱机查看所有的Web页
+        <div>A.文本文件（*。tex）</div>
+        <div da="1">B.网页，仅HTML，（*。html;*.html）</div>
+        <div>C.网页，全部（*.html;*.html）</div>
+        <div>D.Web档案，单一文件（*.html）</div>
+    </div>
+    <br>
+    <div class="timu">
+        1.静态网页的HTML文件的结构一般包括_____标记
+        <div da="1">A.html</div>
+        <div da="1">B.head</div>
+        <div da="1">C.body</div>
+        <div>D.script</div>
+    </div>
+    <br>
+    <div class="timu">
+        2.关于CSS的特点，正确的有（）
+        <div da="1">A.便于页面的修改</div>
+        <div da="1">B.便于页面风格的统一</div>
+        <div>C.便于数据库进行交互</div>
+        <div>D.减少网页体积</div>
+    </div>
+    <br>
+    <div class="timu">
+        3.网页中的超链接目标可以是（）
+        <div da="1">A.网页</div>
+        <div da="1">B.图像</div>
+        <div da="1">C.多媒体文件</div>
+        <div>D.程序</div>
+    </div>
+    <br>
+    <div class="timu">
+        4.对于jpeg格式的图像，以下说法正确的是（）
+        <div>A.采用非失真压缩的方式</div>
+        <div da="1">B.采用失真的压缩方式</div>
+        <div da="1">C.支持24位全色彩</div>
+        <div>D.支持256位全色彩</div>
+    </div>
+    <br>
+    <div class="timu">
+        5.在网页的表格里可以插入的对象有（）
+        <div da="1">A.文字</div>
+        <div da="1">B.图像</div>
+        <div>C.flash动画</div>
+        <div da="1">D.表单</div>
+    </div>
+    <br>
+    <div class="timu">
+        6.HTML文件中，使用绝对地址链接文件（）
+        <div>A.主要用来连接其它网站的网页</div>
+        <div da="1">B.主要用来连接当前网站的网页</div>
+        <div da="1">C.需直接写出链接文件的服务器位置</div>
+        <div>D.需写出链接文件相对于目前网页的位置</div>
+    </div>
+    <br>
+    <div class="timu">
+        7.head和/head标记符之间的内容用于描述页面的()
+        <div>A.主体内容</div>
+        <div da="1">B.头部信息</div>
+        <div da="1">C.页面标题</div>
+        <div da="1">D.关键词</div>
+        <div class="daan">答案:BCD</div>
+    </div>
+    <br>
+    <div class="timu">
+        8.以下英语术语解释正确的是()
+        <div da="1">A.WWW(World Wide Web)</div>
+        <div da="1">B.HTML(HyperText Markup Language)</div>
+        <div>C.HTTP(HyperText Transact Protocol)</div>
+        <div da="1">D.FTP(File Transform Protocol)</div>
+        <div class="daan">答案:ABD</div>
+    </div>
+    <br>
+    <div class="timu">
+        9.网站的主页通常如何表示()
+        <div da="1">A.index.html</div>
+        <div da="1">B.index.htm</div>
+        <div da="1">C.default.html</div>
+        <div>D.default.htm</div>
+        <div class="daan">答案:ABCD</div>
+    </div>
+    <br>
+    <div class="timu">
+        10.关于JPG格式和GIF格式说法正确的是()
+        <div da="1">A.JPG格式是照片和连续色调图像的文件格式</div>
+        <div>B.GIF格式支持渐进式压缩</div>
+        <div da="1">C.JPG常用于矢量图的转存</div>
+        <div da="1">D.JPG支持24位全彩色</div>
+        <div class="daan">答案:ACD</div>
+    </div>
+    <br>
+    <div class="timu">
+        11.下列哪些是图像的格式()
+        <div da="1">A.JPG</div>
+        <div>B.PDF</div>
+        <div>C.SWF</div>
+        <div da="1">D.GIF</div>
+        <div class="daan">答案:AD</div>
+    </div>
+    <br>
+    <div class="timu">
+        12.()可以进行HTML文档的编号
+        <div da="1">A.纯文本编辑器</div>
+        <div da="1">B.记事本</div>
+        <div da="1">C.Frontpage</div>
+        <div da="1">D.Dreamweaver CC</div>
+        <div class="daan">答案:ABCD</div>
+    </div>
+    <br>
+    <div class="timu">
+        13.JPG和GIF格式的图片是网页中主要应用的图片格式，这是因为它们()
+        <div da="1">A.文件容量小</div>
+        <div da="1">B.适用于网络传输</div>
+        <div da="1">C.适用于各种平台</div>
+        <div da="1">D.都被压缩过</div>
+        <div class="daan">答案:ABCD</div>
+    </div>
+    <br>
+    <div class="timu">
+        14.()能够用来制作网页
+        <div da="1">A.Dreamweaver CC</div>
+        <div da="1">B.Frontpage</div>
+        <div>C.Flash MX</div>
+        <div da="1">D.Photoshop CC</div>
+        <div class="daan">答案:ABD</div>
+    </div>
+    <br>
+    <div class="timu">
+        15.使用纯文本编辑器制作网页的特点包括哪些()
+        <div da="1">A.要求制作者熟悉HTML语法及元素</div>
+        <div da="1">B.要求制作者输入所编写的源代码</div>
+        <div>C.具有“所见即所得”的功能</div>
+        <div>D.具有预览网页效果的功能</div>
+        <div class="daan">答案:AB</div>
+    </div>
+    <br>
+    <div class="timu">
+        16.Web页面保存的格式有哪几种()
+        <div da="1">A.全部Web页</div>
+        <div da="1">B.Web档案</div>
+        <div da="1">C.只含HTML的Web页</div>
+        <div da="1">D.文本文件</div>
+        <div class="daan">答案:ABCD</div>
+    </div>
+    <br>
+    <div class="timu">
+        17.网页的超链接有什么用()
+        <div da="1">A.方便访问者从一个网页转移到另一个网页</div>
+        <div da="1">B.有效地组织网站中的各种对象</div>
+        <div da="1">C.可以将独立文档连接起来</div>
+        <div>D.使制作网页更加简单</div>
+        <div class="daan">答案:ABC</div>
+    </div>
+    <br>
+    <div class="timu">
+        18.关于网页超链接设置的说法正确的有()
+        <div da="1">A.对文本设置超链接，必须先选定文本</div>
+        <div>B.对图像设置超链接，不用先选定图像</div>
+        <div da="1">C.设置完成后，必须保存文件才能在浏览器验证超链接效果</div>
+        <div>D.设置完成后，不用保存文件就能在浏览器验证超链接效果</div>
+        <div class="daan">答案:AC</div>
+    </div>
+    <br>
+    <div class="timu">
+        19.在网页制作中，表格可以用来()
+        <div da="1">A.提供插图</div>
+        <div da="1">B.提供文本输入</div>
+        <div>C.链接到别的网站</div>
+        <div da="1">D.整齐有序地组织网页上的信息</div>
+        <div class="daan">答案:ABD</div>
+    </div>
+    <br>
+    <div class="timu">
+        20.以下()属于WWW客户程序
+        <div da="1">A.Internet Explorer</div>
+        <div da="1">B.Netscape Navigator</div>
+        <div>C.WinZip</div>
+        <div>D.WinRAR</div>
+        <div class="daan">答案:AB</div>
+    </div><br><br>
+			    </div>
+    <div class="timu">
+        简答题1.什么是WWW服务？<br>
+        <div class="title">答：WWW是“World Wide Web”的缩写，其含义是“全球网”。是以超文本传输协议为基础，提供面向Internet的信息查询服务，WWW服务可以让用户能用统一界面信息浏览系统查询Internet上的各类信息。</div>
+    </div>
+		<br>
+    <div class="timu">
+        简答题2.什么是超文本链接？什么是超媒体链接？<br>
+        <div class="title">答：超文本链接是利用超文本在Web 页面之间进行跳转，所谓超文本(Hypertext)是在普通文本中包含了可以链接到其他文本的特殊文字，一般在表现形式上又不
+        同于其他文本。超媒体链接是在图象、动画中加入链接信息，通过超媒体，你可以从一张图片或动画链接到其他的文字、图片或动画等媒体上。</div>
+    </div><br>
+    <div class="timu">
+        简答题3.静态网页和动态网页有何不同？<br>
+        <div class="timu">答：静态网页与静态网页的区别在于网页是否具有应用程序解释器和后台数据库支持，而不是指网页是否具有动感效果。使用了应用程序解释器和后台数据库的，我们称之为动态网页，反之为静态网页</div>
+    </div><br>
+    <div class="timu">
+        简答题4.网页有哪些基本元素？<br>
+        <div class="title">答:文本、图片、多媒体、超链接和脚本五种。</div>
+    </div><br>
+    <div class="timu">
+        简答题5.JPG格式图片和GIF格式图片有什么不同？<br>
+        <div class="title">答：GIF采用无损压缩方式，图像没有细节上的损失，并且解压打开的速度非常快。同时GIF图像还支持透明背景，放在网页中额能够和网页背景很好的融合，结合得像一个整体，视觉效果非常协调。另外，GIF还支持动态效果，通过专门的软件(如GIF
+        Animator)可以制作出动态的GIF图像，使网页效果更为生动。但GIF最多支持256种颜色，不适合照片、风景画等颜色丰富的素材的压缩。JPEG使用先进的压缩算法，使文件比GIF格式的图像文件小，因为下载速度更快。JPEG支持高达1670万种颜色，非常适于存储颜色丰富的画面，如风景画、照片等。 </div>
+    </div><br>
+    <div class="timu">
+        简答题6.HTML是什么意思？它是一种什么样的语言？<br>
+        <div class="title">答：HTML是Hypertext Markup Language的缩写，意思为“超文本标记语言”。HTML是用于编写网页的统一的语言规范。只有采用HTML制作的网页，浏览器才能正确地进行阅读和运行。</div>
+    </div>
+    </div>
+</body>
+
+
+</html>
+<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="http://192.168.1.24:199/zhishi/js/a.js"></script>

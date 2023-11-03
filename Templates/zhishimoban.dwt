@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>无标题文档</title>
+<!-- TemplateEndEditable -->
+<link href="../zuoye/css/css.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-webfont@1.1.0/lxgwwenkai-regular.css" />
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<!-- TemplateParam name="b1" type="boolean" value="true" -->
+</head>
+
+<body>
+<!-- TemplateBeginRepeat name="m1" -->
+<div class="bt">
+  <h2><!-- TemplateBeginEditable name="t1" --><!-- TemplateEndEditable --></h2>
+</div>
+<br>
+<div class="nr"><!-- TemplateBeginIf cond="b1" --><!-- TemplateBeginEditable name="EditRegion4" -->
+  <p>&nbsp;</p>
+<!-- TemplateEndEditable --><!-- TemplateEndIf --></div>
+<!-- TemplateEndRepeat -->
+</body>
+</html>

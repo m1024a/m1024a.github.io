@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            /* z-index: 100; */
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <script>
+        function $(select) {
+            return document.querySelector(select);
+        }
+        //   获取小球渲染的区域
+        let _box = $(".box");
+
+        //   生成随机数
+        function suiji(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        let _width = parseInt(
+            window.getComputedStyle(_box, null).getPropertyValue("width")
+        );
+        let _height = parseInt(
+            window.getComputedStyle(_box, null).getPropertyValue("height")
+        );
+        function creatBall() {
+            //   生成小球节点
+            let _ball = document.createElement("div");
+            let _size = suiji(30, 100);
+            _ball.style.width = _ball.style.height = _size + "px";
+            _ball.style.borderRadius = 50 + "%";
+            //   生成小球的随机颜色
+            let _colorPool = [
+                "#0000FF",
+                "#0099FF",
+                "#00FFFF",
+                "#0099CC",
+                "#FF0000",
+                "#996600",
+            ]; //颜色池（方案一）
+            let r = parseInt(suiji(0, 255));
+            let g = parseInt(suiji(0, 255));
+            let b = parseInt(suiji(0, 255));
+            let bgcolor = `rgba(${r},${g},${b},.7)`;
+            _ball.style.backgroundColor = bgcolor;
+            // 随机小球的位置
+            let _scopeW = _width - _size;
+            let _scopeH = _height - _size;
+            let _left = parseInt(suiji(0, _scopeW));
+            let _top = parseInt(suiji(0, _scopeH));
+            _ball.style.position = "absolute";
+            console.log(_left);
+            // 小球移动方向
+            let _dirArr = ["left", "top", "right", "bottom"];
+            let _dir = _dirArr[suiji(0, 3)];
+            setInterval(() => {
+                switch (_dir) {
+                    case "left":
+                        _left--;
+                        _dir = _left <= 0 ? "right" : _dir;
+                        break;
+                    case "right":
+                        _left++;
+                        _dir = _left >= _scopeW ? "left" : _dir;
+                        break;
+                    case "top":
+                        _top--;
+                        _dir = _top <= 0 ? "bottom" : _dir;
+                        break;
+                    case "bottom":
+                        _top++;
+                        _dir = _top >= _scopeH ? "top" : _dir;
+                        break;
+                }
+                _ball.style.left = _left + "px";
+                _ball.style.top = _top + "px";
+            }, 1000 / 90);
+            _box.appendChild(_ball);
+        }
+        for (let i = 1; i < 100; i++) {
+            creatBall();
+        }
+        function clearBall() {
+            _box.removeChild(_ball);
+        }
+    </script>
+</body>
+
+</html>

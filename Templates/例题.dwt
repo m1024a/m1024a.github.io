@@ -1,0 +1,208 @@
+
+
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- TemplateBeginEditable name="doctitle" -->
+    <title>例1</title>
+    <!-- TemplateEndEditable -->
+    <style>
+        .timu {
+            /* div颜色 */
+            background-color: blueviolet;
+            /* 内边距 */
+            padding: 10px;
+            /* 圆角 */
+            border-radius: 10px;
+            /* 字体大小 */
+            font-size: 200%;
+            /* 字体加粗 */
+            font-weight: bolder;
+            /* 鼠标样式（选中） */
+            cursor: pointer;
+        }
+
+        .timu div {
+            color: aqua;
+            background-color: brown;
+            padding: 15px;
+            margin-top: 10px;
+            border-radius: 15px;
+
+        }
+
+        .timu div:hover {
+            color: black;
+            background-color: aliceblue;
+            /* 鼠标样式（十字光标） */
+            cursor: crosshair;
+        }
+
+         .timu .daan {
+            background-color: brown;
+            color: yellow;
+            display: none;（弃用）
+        } */
+
+        body {
+            font-family: LXGW WenKai;
+        }
+
+        .bac {
+            background-color: aqua;
+            padding: 20px;
+        }
+
+        .ck {
+            color: aliceblue;
+            /* 定位方式 */
+            position: fixed;
+            background-color: cornflowerblue;
+            width: 200px;
+            height: 200px;
+            font-size: 150%;
+            border-radius: 8px;
+            left: 45%;
+            top: 45%;
+            font-weight: bold;
+            /* 整体放大 */
+            transform: scale(1.5);
+            /* 默认为打开 设置为关闭 */
+            display: none;
+        }
+
+        .ck .bt {
+            color: black;
+            width: 200px;
+            background-color: darkgray;
+            border-radius: 8px;
+
+        }
+
+        .ck .bt button {
+            float: right;
+            width: 25px;
+            height: 25px;
+            margin-top: 4px;
+            margin-right: 4px;
+        }
+
+        /* 替换图片的属性 */
+        .ck img {
+            width: 180px;
+            height: 120px;
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-left: 10px;
+            border-radius: 5px;
+            /* 图片透明度 */
+            filter: opacity(90%)
+        }
+
+        .jishu {
+            color: rgb(255, 255, 255);
+            background-color: rgb(107, 7, 7);
+            position: fixed;
+            width: 200px;
+            height: 120px;
+            border-radius: 10px;
+            padding: 5px;
+            font-size: 180%;
+            font-weight: bolder;
+            right: 0;
+        }
+    </style>
+    <link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-webfont@1.1.0/lxgwwenkai-regular.css" />
+    <!-- TemplateBeginEditable name="head" -->
+    <!-- TemplateEndEditable -->
+</head>
+
+<body>
+    <div class="jishu">
+        <div>答对：<span class="dui">0</span>次</div>
+        <div>答错：<span class="cuo">0</span>次</div>
+        <button class="cz">重置</button>
+    </div>
+    <div class="ck">
+        <div class="bt">标题<button>x</button></div>
+        <span></span>
+        <img src="../zuoye/liti/gz.gif" alt="">
+    </div>
+    <!-- TemplateBeginRepeat name="TIMU" -->
+    <div class="timu"><!-- TemplateBeginEditable name="题目" --><!-- TemplateEndEditable -->
+      <div da="1"><!-- TemplateBeginEditable name="A" -->A.<!-- TemplateEndEditable --></div>
+      <div da="1"><!-- TemplateBeginEditable name="B" -->B.<!-- TemplateEndEditable --></div>
+      <div da="1"><!-- TemplateBeginEditable name="C" -->C.<!-- TemplateEndEditable --></div>
+      <div da="1"><!-- TemplateBeginEditable name="D" -->D.<!-- TemplateEndEditable --></div>
+    </div>
+    <br>
+    <!-- TemplateEndRepeat -->
+    </div>
+</body>
+
+
+</html>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script>
+    $(document).ready(function () {
+
+        $(".timu div").click(function () {
+            setTimeout(function() {
+                $(".ck").hide()
+            }, 1500);
+            // 判断.timu div内是否有标记da=1
+            var da = $(this).attr("da");
+            // 判断是否有da标记
+            var dd = $(this).attr("dd");
+            // 如果有
+            if (dd == undefined) {
+                // 如果没有
+                if (da != undefined) {
+                    // 若有标记图片替换文字替换回答正确
+                    $(".ck span").text("回答正确");
+                    $(".ck img").attr("src", "./gz.gif");
+                    $(this).css("background-color", "blue")
+                    // 若无标记图片文字替换为回答错误 回答错误
+                    add(".dui")
+                } else {
+                    $(".ck span").text("回答错误");
+                    $(".ck img").attr("src", "./2.gif");
+                    $(this).css("background-color", "red")
+                    add(".cuo")
+                }
+
+
+                // 点击后给.timu div 添加dd标记
+                $(this).attr("dd", "1");
+                // $(".ck").show();
+            }
+            // 函数
+            function add(idtxt) {
+                var a = parseInt($(idtxt).text());
+                $(idtxt).text(a + 1);
+				push();
+
+            }
+
+
+            // 点击选项后显示
+            $(".ck").show();
+        })
+		function push()
+		{
+			var dui = $("#dui").text();
+			var cuo = $("#cuo").text();
+			$.post("./update.php",{
+				dui:dui,
+				cuo:cuo
+				},function(data){
+					console.log(data);
+					
+			},'json');
+		}
+
+    })
+</script>

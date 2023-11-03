@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .nr {
+            font-size: 150%;
+            font-weight: bolder;
+            margin: 0 auto;
+            width: 1500px;
+            background-color: rgb(218, 218, 218);
+            opacity: 0.7;
+            border-radius: 5px;
+        }
+
+        .img {
+            width: 250px;
+            height: 250px;
+            position: absolute;
+            background-image: url('./2.gif');
+            background-size: cover;
+            z-index: 100;
+            /* 在顶层显示 */
+        }
+
+        body {
+            background-image: url("https://www.dmoe.cc/random.php") !important;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position-x: center;
+        }
+
+        .da {
+            margin: 0 auto;
+            width: 1500px;
+            font-size: 130%;
+            font-weight: bolder;
+            opacity: 0.8;
+            background-color: blueviolet;
+            padding: 1px;
+            border-radius: 10px 10px 10px 10px
+        }
+
+        .acd {
+            font-size: 170%;
+        }
+
+        * {
+            font-family: LXGW WenKai
+        }
+        .qa{
+        font-size: 300%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="img"></div>
+    <div class="da">
+        <p>时间:2023/9/11 周一下午 <br> <a href="../2-0/kuangjia/untitled.html">天气:雷雨</a> 
+            <img src="./1.png" alt="" width="40">
+        </p>
+    </div>
+    <div class="nr">
+        <ul>
+            <li>
+                <h1>
+                    什么是网页？</h1>
+                <p>网页是由HTML或者其他语言编写而成的，它可以通过WWW的方式实现信息的传播和交流。因此网页又被称为HTML文档或web页。在浏览器中输入网址后，看到的第一个网页，我们称其为“主页。”主页就像和一本书的目录，它的名字一般叫作index.htm或者index.asp.
+                </p>
+            </li>
+            <li>
+                <h1>网页中的元素常见的有哪些？</h1>
+                <p>文字，图片，表单，标志，导航，动画，广告</p>
+            </li>
+            <li>
+                <h1>静态网页定义及优点
+                </h1>
+                <p>静态网页是标准的HTML文件，常见的静态网页扩展名：htm.html.xhtml<br>优点：内容相对稳定，因此容易被搜索引擎检索，页面浏览看速度迅速，过程无需连接数据库，开启页面速度快于动态页面
+                </p>
+            </li>
+            <li>
+                <h1>动态网页定义</h1>
+                <p>动态网页是一个对所有动态生成与动态更新的网页的统称。与传统的静态页面相反，它会因为变量的改变而产生不同的网页。这可能是服务器端生成的网页，也可能是用户端生成的网页，或者是两者的混合。服务端的动态网页是指服务器通过应用程式私服服务器处理服务器端脚本而生成的网页。常见的动态网页的扩展名：asp/aspx/jsp/php/cgi
+                </p>
+            </li>
+            <li>
+                <h1>网页与网站的关系</h1>
+                <p>1.网页之间是独立的，通过超链接联系。<br>2.网页是网站的基本信息单位。<br>3.网页又有许多HTML元素集合组成<br>4.网站可以由任意个网页集合而成。</p>
+            </li>
+            <li>
+                <h1>网站根据内容不同，可以分为?</h1>
+                <p>1.门户类网站<br>2.专业类网站<br>3.企业类网站 <br> 4.个人类网站
+                </p>
+            </li>
+        </ul>
+    </div>
+
+    <embed src="../../1.mp3" type="" hidden="true" autostart="true" loop="true">
+        <br />
+        <center class="dibu">
+            <div style=" line-height: 20px;font-size: 9pt;font-weight: bold;;position: relative;">
+                <span>
+                    "
+                    <span style="color: rgb(13, 109, 252); font-weight: bold;" id="hitokoto;position:absolute;top: 90%">
+                        <a href="#" id="hitokoto_text" class="qa">
+                            "没有BUG的代码是不完美的！."
+                        </a>
+                    </span> "
+                </span>
+            </div> 
+</body>
+<script>
+    let img = document.querySelector('.img')
+    let deg = 0
+    let imgx = 0
+    let imgy = 0
+    let imgl = 0
+    let imgt = 0
+    let y = 0
+    let index = 0
+    window.addEventListener('mousemove', function (xyz) {
+        imgx = xyz.x - img.offsetLeft - img.clientWidth / 2
+        imgy = xyz.y - img.offsetTop - img.clientHeight / 2
+        deg = 360 * Math.atan(imgy / imgx) / (2 * Math.PI)
+        index = 0
+        let x = event.clientX
+        if (img.offsetLeft < x) {
+            y = -180
+        } else {
+            y = 0
+        }
+    })
+    setInterval(() => {
+        img.style.transform = "rotateZ(" + deg + "deg) rotateY(" + y + "deg)"
+        index++
+        if (index < 50) {
+            imgl += imgx / 50
+            imgt += imgy / 50
+        }
+        img.style.left = imgl + "px"
+        img.style.top = imgt + "px"
+    }, 10)
+</script>
+<script type="text/javascript">
+    ! function (e, t, a) {
+       function r() {
+           for (var e = 0; e < s.length; e++) s[e].alpha <= 0 ? (t.body.removeChild(s[e].el), s.splice(e, 1)) : (s[
+                   e].y--, s[e].scale += .004, s[e].alpha -= .013, s[e].el.style.cssText = "left:" + s[e].x +
+               "px;top:" + s[e].y + "px;opacity:" + s[e].alpha + ";transform:scale(" + s[e].scale + "," + s[e]
+               .scale + ") rotate(45deg);background:" + s[e].color + ";z-index:99999");
+           requestAnimationFrame(r)
+       }
+       function n() {
+           var t = "function" == typeof e.onclick && e.onclick;
+           e.onclick = function (e) {
+               t && t(), o(e)
+           }
+       }
+
+       function o(e) {
+           var a = t.createElement("div");
+           a.className = "heart", s.push({
+               el: a,
+               x: e.clientX - 5,
+               y: e.clientY - 5,
+               scale: 1,
+               alpha: 1,
+               color: c()
+           }), t.body.appendChild(a)
+       }
+
+       function i(e) {
+           var a = t.createElement("style");
+           a.type = "text/css";
+           try {
+               a.appendChild(t.createTextNode(e))
+           } catch (t) {
+               a.styleSheet.cssText = e
+           }
+           t.getElementsByTagName("head")[0].appendChild(a)
+       }
+
+       function c() {
+           return "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math
+               .random()) + ")"
+       }
+       var s = [];
+       e.requestAnimationFrame = e.requestAnimationFrame || e.webkitRequestAnimationFrame || e
+           .mozRequestAnimationFrame || e.oRequestAnimationFrame || e.msRequestAnimationFrame || function (e) {
+               setTimeout(e, 1e3 / 60)
+           }, i(
+               ".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}"
+           ), n(), r()
+   }(window, document);
+
+
+
+</script>
+</html>

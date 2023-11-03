@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1-1 Web的相关概念</title>
+    <link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-webfont@1.1.0/lxgwwenkai-regular.css" />
+</head>
+<style>
+            
+        .img{
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            background-image: url('./1.gif');
+            background-size: cover;
+        }
+    * {
+    font-family:LXGW WenKai
+}
+    .body {
+    background-image: url("https://img.zcool.cn/community/01d8f9568643656ac7251bb6fa4fdf.jpg@1280w_1l_2o_100sh.jpg") !important;
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-attachment:fixed;
+    background-position-x:center;
+    }
+    .a{
+        opacity: 0.6;
+        font-size: 90%;
+    }
+    *{
+        font-size: 109%;
+    }
+* {
+    font-weight:bold
+}
+body {
+    font-family: LXGW WenKai;
+}
+</style>
+
+</script>
+<body class="body">
+    <div class="img"></div>
+    <div id="1231">
+        <p class="a">时间:2023/9/7 周四下午                     <br> 天气:阴
+    <img src="./018b085915851eb5b3086ed4ddc781.jpg@1280w_1l_2o_100sh.png" alt=""  width="40"></p>
+    <hr>
+    </div>
+    <div>
+        <ul>
+            <li>
+                <h4>什么是www</h4>
+                <p>WWW是World Wide Web的简称，也称为Web、3W等，WWW是基于客户机/服务器方式的信息发现技术和超文本技术的综合。</p>
+            </li>
+            <li>
+                <h4>HTTP协议</h4>
+                <p>HTTP协议指的是超文本传输协议。超文本传输协议是互联网上应用最为广泛的一种网络协议</p>
+            </li>
+            <li>
+                <h4>FTP协议</h4>
+                <p>FTP（File Transfer Protocol，文件传输协议）是 TCP/IP 协议组中的协议之一。FTP 协议包括两个组成部分，其一为 FTP 服务器，其二为 FTP 客户端。</p>
+            </li>
+            <li>
+                <h4>URL</h4>
+                <p>统一资源定位器  格式:协议类型+域名或IP地址+路径及文件名</p>
+            </li>
+            <li>
+                <h4>HTML语言</h4>
+                <p>超级文本标记语言</p>
+            </li>
+        </ul>
+    </div>
+    <br />
+        <center class="dibu">
+            <div style=" line-height: 20px;font-size: 9pt;font-weight: bold;;position: relative;">
+                <span>
+                    "
+                    <span style="color: rgb(13, 109, 252); font-weight: bold;" id="hitokoto;position:absolute;top: 90%">
+                        <a href="#" id="hitokoto_text">
+                            "没有BUG的代码是不完美的！"
+                        </a>
+                    </span> "
+                </span>
+                <p style="margin-left: 10rem;font-size: 8pt;">
+                    <small>
+                        —— Anwen's Cloud
+                    </small>
+                </p>
+            </div> 
+            
+</body>
+<script>
+    let img = document.querySelector('.img')
+    // 定义小图片的旋转角度
+    let deg = 0
+    // 定义小图片位于网页左侧的位置
+    let imgx = 0
+    // 定义小图片位于网页顶部的位置
+    let imgy = 0
+    // 定义小图片x轴的位置
+    let imgl = 0
+    // 定义小图片y轴的位置
+    let imgt = 0
+    // 定义小图片翻转的角度
+    let y = 0 
+    // 定义一个计数器
+    let index = 0
+
+    window.addEventListener('mousemove',function(xyz){
+        // 获取网页左侧距离的图片位置
+        imgx = xyz.x - img.offsetLeft - img.clientWidth /2
+        // 多去网页顶部距离图片的位置
+        imgy = xyz.y - img.offsetTop - img.clientHeight /2
+        // 套入公式，定义图片的旋转角度
+        deg = 360*Math.atan(imgy/imgx)/(2*Math.PI)
+        // 每当鼠标移动的时候重置index
+        index= 0
+        // 定义当前鼠标的位置
+        let x = event.clientX
+        // 当鼠标的x轴大于图片的时候，提普安就要对着鼠标，所以需要将图片翻转过来
+        // 否则就不用翻转
+        if(img.offsetLeft<x){
+            y=-180
+        }else{
+            y=0
+        }
+    })
+    setInterval(()=>{
+        // 设置小图片的旋转和翻转
+        img.style.transform = "rotateZ("+deg+"deg) rotateY("+y+"deg)"
+        index++
+        // 在这里设置小图片的位置和速度，并判断小图片到达鼠标位置时停止移动
+        if(index<50){
+            imgl+=imgx/50
+            imgt+=imgy/50
+        }
+        img.style.left = imgl+"px"
+        img.style.top = imgt+"px"
+    },10)
+</script>
+</html>
