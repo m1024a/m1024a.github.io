@@ -616,4 +616,62 @@
 
 </html>
 <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-<script src="http://192.168.1.24:199/zhishi/js/a.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".timu div").click(function () {
+            setTimeout(() => {
+                $("#tishi").hide();
+            }, 1000);
+            var da = $(this).attr("da");
+            var dd = $(this).attr("dd");
+            if (dd == undefined) {
+                if (da != undefined) {
+                    $(".tishi .title").text("2.gif");
+                    $(".tishi img").attr("src", "http://192.168.1.24:199/zhishi/images/1.gif");
+                    //鎶婇鑹叉潯鏀逛簡
+                    $(this).css("background-color", "blue");
+                    //鎶婃暟閲忔敼浜�
+                    add("#dui");
+
+                } else {
+                    $(".tishi .title").text("gz.gif");
+                    $("#tishi img").attr("src", "http://192.168.1.24:199/zhishi/images/2.gif");
+                    //鎶婇鑹叉潯鏀逛簡
+                    $(this).css("background-color", "red");
+                    add("#cuo");
+                }
+                $(this).attr("dd", "1");
+                $("#tishi").show();
+            }
+            
+        })
+
+        $(".daan").click(function () {
+            $(this).hide();
+        })
+        $("#tishi").click(function () {
+            $("#tishi").hide();
+        })
+
+        //鍑芥暟
+        function add(idtxt) {
+            var a = parseInt($(idtxt).text());
+            $(idtxt).text(a + 1);
+			push();
+        }
+		
+		
+		function push()
+		{
+			var dui = $("#dui").text();
+			var cuo = $("#cuo").text();
+			$.post("./update.php",{
+				dui:dui,
+				cuo:cuo
+				},function(data){
+					
+			},'json');
+		}
+
+    })
+	</script>
