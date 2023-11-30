@@ -1,0 +1,299 @@
+<!DOCTYPE html><html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>例4</title>
+<style>
+        .timu {
+            /* div颜色 */
+            background-color: blueviolet;
+            /* 内边距 */
+            padding: 10px;
+            /* 圆角 */
+            border-radius: 10px;
+            /* 字体大小 */
+            font-size: 200%;
+            /* 字体加粗 */
+            font-weight: bolder;
+            /* 鼠标样式（选中） */
+            cursor: pointer;
+        }
+
+        .timu div {
+            color: aqua;
+            background-color: brown;
+            padding: 15px;
+            margin-top: 10px;
+            border-radius: 15px;
+
+        }
+
+        .timu div:hover {
+            color: black;
+            background-color: aliceblue;
+            /* 鼠标样式（十字光标） */
+            cursor: crosshair;
+        }
+
+         .timu .daan {
+            background-color: brown;
+            color: yellow;
+            display: none;（弃用）
+        } 
+
+        body {
+            font-family: LXGW WenKai;
+        }
+
+        .bac {
+            background-color: aqua;
+            padding: 20px;
+        }
+
+        .ck {
+            color: aliceblue;
+            /* 定位方式 */
+            position: fixed;
+            background-color: cornflowerblue;
+            width: 200px;
+            height: 200px;
+            font-size: 150%;
+            border-radius: 8px;
+            left: 45%;
+            top: 45%;
+            font-weight: bold;
+            /* 整体放大 */
+            transform: scale(1.5);
+            /* 默认为打开 设置为关闭 */
+            display: none;
+        }
+
+        .ck .bt {
+            color: black;
+            width: 200px;
+            background-color: darkgray;
+            border-radius: 8px;
+
+        }
+
+        .ck .bt button {
+            float: right;
+            width: 25px;
+            height: 25px;
+            margin-top: 4px;
+            margin-right: 4px;
+        }
+
+        /* 替换图片的属性 */
+        .ck img {
+            width: 180px;
+            height: 120px;
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-left: 10px;
+            border-radius: 5px;
+            /* 图片透明度 */
+            filter: opacity(90%)
+        }
+
+        .jishu {
+            color: rgb(255, 255, 255);
+            background-color: rgb(107, 7, 7);
+            position: fixed;
+            width: 200px;
+            height: 120px;
+            border-radius: 10px;
+            padding: 5px;
+            font-size: 180%;
+            font-weight: bolder;
+            right: 0;
+        }
+    </style>
+    <link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-webfont@1.1.0/lxgwwenkai-regular.css" />
+</head>
+
+<body>
+    <div class="jishu">
+        <div>答对：<span class="dui">0</span>次</div>
+        <div>答错：<span class="cuo">0</span>次</div>
+        <button class="cz">重置</button>
+    </div>
+    <div class="ck">
+        <div class="bt">标题<button>x</button></div>
+        <span></span>
+        <img src="gz.gif" alt="">
+    </div>
+    <div class="timu"> [例1]链接到同一网页的超链接，又称为------
+        <div>A.绝对超链接</div>
+        <div>B.相对超链接</div>
+        <div>C.邮件超链接</div>
+        <div da="1">D.锚点超链接</div>
+      </div>
+      <div class="timu"> [例2]要想在新的浏览器窗口中打开链接页面，应将连接对象的&quot;目标（target)&quot;属性设为------
+        <div>A.-parent</div>
+        <div da="1">B.-blank</div>
+        <div>C.-self</div>
+        <div>D.-top</div>
+      </div>
+      <div class="timu"> 
+        <p>[例3]在单个图像内，最多可设置------个链接  </p>
+        <div>A.1个</div>
+        <div>B.2个</div>
+        <div>C.10个</div>
+        <div da="1">D.多个</div>
+      </div>
+      <div class="timu"> [例4]在“属性”面板的“链接”里直接输入“#”，就可以制作一个---------
+        <div>A.内部链接</div>
+        <div>B.外部链接</div>
+        <div da="1">C.空链接</div>
+        <div>D.脚本链接</div>
+      </div>
+      <div class="timu"> [例5]邮件的正确格式-------
+        <div>A.：maiil to://abc@abcd.com</div>
+        <div>B.：mail to:abc@abcd.com</div>
+        <div>C.：maiil to:abc@abcd.com</div>
+        <div da="1">D.：maiilto:abc@abcd.com</div>
+      </div>
+      <div class="timu"> [例6]以下能够创建超链接的是-------
+        <div da="1">A.在“链接”文本框中直接输入“#”</div>
+        <div>B.在“链接”文本框中直接输入“！”</div>
+        <div>C.在“链接”文本框中直接输入“￥”</div>
+        <div>D.在“链接”文本框中直接输入“@”</div>
+      </div>
+      <div class="timu"> [例7]源端点不能用于附加超链接的对象组有--------
+        <div>A.文本、图像、按钮</div>
+        <div da="1">B.文本、图像、单元格</div>
+        <div>C.文本、图像、flash动画</div>
+        <div>D.文本、图像、图层</div>
+      </div>
+      <div class="timu"> [例8]通过页面属性可以修改链接的样式，下面哪些不能在页面属性里设置--------
+        <div>A.链接的各种状态颜色</div>
+        <div>B.链接的文字样式</div>
+        <div>C.连接的下划线</div>
+        <div da="1">D.链接文字的底纹样式</div>
+      </div>
+      <div class="timu"> [例9]下列路径中属于绝对路径的是------
+        <div da="1">A.http://www.sian.com/index.html</div>
+        <div>B./student/webpage/10.html</div>
+        <div>C.10.html</div>
+        <div>D.webpage/10.html</div>
+      </div>
+      <div class="timu"> [例10]做文字链接的时候，有------种方法
+        <div>A.4种</div>
+        <div>B.3种</div>
+        <div da="1">C.5种</div>
+        <div>D.6种</div>
+      </div>
+      <div class="timu"> [例11]在网页中无论是加入图像文件或是超链接。--------
+        <div>A. 它们都是绝对i路径</div>
+        <div da="1">B.它们都是相对路径</div>
+        <div>C.它们都是路径</div>
+        <div>D.以上都不对</div>
+      </div>
+      <div class="timu"> [例12]链接是-------的简称，利用-------可以实现不同的URL之间的跳转。
+        <div>A.超级链接，修改</div>
+        <div>B.修改，超级链接</div>
+        <div da="1">C.超级链接，超级链接</div>
+        <div>D.文本，超级链接</div>
+      </div>
+      <div class="timu"> [例13]导航条可以是文字链接和-------的跳转。
+        <div>A.文件</div>
+        <div da="1">B.图像</div>
+        <div>C.超级</div>
+        <div>D.文件夹</div>
+      </div>
+      <div class="timu"> [例14]可以在-----中设置网页链接文本不同状态的颜色。
+        <div>A.“插入”面板</div>
+        <div>B.“属性”面板</div>
+        <div da="1">C.“页面属性”面板</div>
+        <div>D.“编辑菜单”</div>
+      </div>
+      <div class="timu"> [例15]下面有关超链接的描述正确的是------
+        <div da="1">A.可以建立一个空链接，只需在链接中输入“#“即可</div>
+        <div>B.如果不设置目标属性，则默认为-blank</div>
+        <div>C.目标属性中的个数是不会变化的</div>
+        <div da="1">D.如果要链接到”新浪网“，那么只需在链接中输入即可</div>
+      </div>
+      <div class="timu"> [例16]在图片中设置超链接的说法正确的是-------
+        <div da="1">A.一个图片上能设置多个超链接</div>
+        <div>B.图片上不能设置超链接</div>
+        <div>C.一个图片上只能设置一个超链接</div>
+        <div>D.鼠标移动到带超链接的图片上仍然显示箭头形状</div>
+      </div>
+      <div class="timu"> [例17]-----是网页与网页之间的纽带，也是网页的重要特色
+        <div da="1">A.超链接</div>
+        <div>B.框架</div>
+        <div>C.表格</div>
+        <div>D.图像</div>
+      </div>
+      <div class="timu"> [例18]创建一个位于文档内部位置的链接的代码是
+        <div da="1">A.&lt; a href=&quot;#NAME&quot;&gt;&lt;/a&gt;</div>
+        <div>B.&lt; a href=&quot;NAME&quot;&gt;&lt;/a&gt;</div>
+        <div>C.&lt; a href=&quot;mailto:EMAIL&quot;&gt;&lt;/a&gt;</div>
+        <div>D.&lt; a href=&quot;URL&quot;&gt;&lt;/a&gt;</div>
+      </div>
+</body>
+
+
+<!-- InstanceEnd --></html>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script>
+    $(document).ready(function () {
+
+        $(".timu div").click(function () {
+            setTimeout(function() {
+                $(".ck").hide()
+            }, 1500);
+            // 判断.timu div内是否有标记da=1
+            var da = $(this).attr("da");
+            // 判断是否有da标记
+            var dd = $(this).attr("dd");
+            // 如果有
+            if (dd == undefined) {
+                // 如果没有
+                if (da != undefined) {
+                    // 若有标记图片替换文字替换回答正确
+                    $(".ck span").text("回答正确");
+                    $(".ck img").attr("src", "./gz.gif");
+                    $(this).css("background-color", "blue")
+                    // 若无标记图片文字替换为回答错误 回答错误
+                    add(".dui")
+                } else {
+                    $(".ck span").text("回答错误");
+                    $(".ck img").attr("src", "./2.gif");
+                    $(this).css("background-color", "red")
+                    add(".cuo")
+                }
+
+
+                // 点击后给.timu div 添加dd标记
+                $(this).attr("dd", "1");
+                // $(".ck").show();
+            }
+            // 函数
+            function add(idtxt) {
+                var a = parseInt($(idtxt).text());
+                $(idtxt).text(a + 1);
+				push();
+
+            }
+
+
+            // 点击选项后显示
+            $(".ck").show();
+        })
+		function push()
+		{
+			var dui = $(".dui").text();
+			var cuo = $(".cuo").text();
+			$.post("./update.php",{
+				dui:dui,
+				cuo:cuo
+				},function(data){
+					console.log(data);
+					
+			},'json');
+		}
+
+    })
+</script>

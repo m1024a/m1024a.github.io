@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>例3</title>
+    <style>
+        .timu {
+            /* div颜色 */
+            background-color: blueviolet;
+            /* 内边距 */
+            padding: 10px;
+            /* 圆角 */
+            border-radius: 10px;
+            /* 字体大小 */
+            font-size: 200%;
+            /* 字体加粗 */
+            font-weight: bolder;
+            /* 鼠标样式（选中） */
+            cursor: pointer;
+        }
+
+        .timu div {
+            color: aqua;
+            background-color: brown;
+            padding: 15px;
+            margin-top: 10px;
+            border-radius: 15px;
+
+        }
+
+        .timu div:hover {
+            color: black;
+            background-color: aliceblue;
+            /* 鼠标样式（十字光标） */
+            cursor: crosshair;
+        }
+
+        .timu .daan {
+            background-color: brown;
+            color: yellow;
+            display: none;
+            （弃用）
+        }
+
+         body {
+            font-family: LXGW WenKai;
+        }
+
+        .bac {
+            background-color: aqua;
+            padding: 20px;
+        }
+
+        .ck {
+            color: aliceblue;
+            /* 定位方式 */
+            position: fixed;
+            background-color: cornflowerblue;
+            width: 200px;
+            height: 200px;
+            font-size: 150%;
+            border-radius: 8px;
+            left: 45%;
+            top: 45%;
+            font-weight: bold;
+            /* 整体放大 */
+            transform: scale(1.5);
+            /* 默认为打开 设置为关闭 */
+            display: none;
+        }
+
+        .ck .bt {
+            color: black;
+            width: 200px;
+            background-color: darkgray;
+            border-radius: 8px;
+
+        }
+
+        .ck .bt button {
+            float: right;
+            width: 25px;
+            height: 25px;
+            margin-top: 4px;
+            margin-right: 4px;
+        }
+
+        /* 替换图片的属性 */
+        .ck img {
+            width: 180px;
+            height: 120px;
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-left: 10px;
+            border-radius: 5px;
+            /* 图片透明度 */
+            filter: opacity(90%)
+        }
+
+        .jishu {
+            color: rgb(255, 255, 255);
+            background-color: rgb(107, 7, 7);
+            position: fixed;
+            width: 200px;
+            height: 120px;
+            border-radius: 10px;
+            padding: 5px;
+            font-size: 180%;
+            font-weight: bolder;
+            right: 0;
+        }
+    </style>
+    <link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-webfont@1.1.0/lxgwwenkai-regular.css" />
+</head>
+
+<body>
+  <div class="jishu">
+    <div>答对：<span class="dui">0</span>次</div>
+    <div>答错：<span class="cuo">0</span>次</div>
+    <button class="cz">重置</button>
+</div>
+<div class="ck">
+    <div class="bt">标题<button>x</button></div>
+    <span></span>
+    <img src="gz.gif" alt="">
+</div>
+    <div class="timu"><!-- InstanceBeginEditable name="题目" -->[例一]常用的网页动画格式有______<!-- InstanceEndEditable -->
+        <div><!-- InstanceBeginEditable name="A" -->A.gif 文件和 tiff文件<!-- InstanceEndEditable --></div>
+        <div da="1"><!-- InstanceBeginEditable name="B" -->B.swf文件<!-- InstanceEndEditable --></div>
+        <div><!-- InstanceBeginEditable name="C" -->C.png文件<!-- InstanceEndEditable --></div>
+        <div><!-- InstanceBeginEditable name="D" -->D.swf 文件和 png文件<!-- InstanceEndEditable --></div>
+  </div>
+      <br>
+      <!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+      <div class="timu"><!-- InstanceBeginEditable name="题目" -->[例二]常用的网页图像格式有______和______<!-- InstanceEndEditable -->
+        <div><!-- InstanceBeginEditable name="A" -->A.gif,tiff<!-- InstanceEndEditable --></div>
+        <div><!-- InstanceBeginEditable name="B" -->B.tiff,jpg<br>
+        <!-- InstanceEndEditable --></div>
+        <div da="1"><!-- InstanceBeginEditable name="C" -->C.gif,jpg<!-- InstanceEndEditable --></div>
+        <div><!-- InstanceBeginEditable name="D" -->D.tiff,png<!-- InstanceEndEditable --></div>
+      </div>
+      <br>
+      <!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+      <div class="timu"><!-- InstanceBeginEditable name="题目" --><br>
+        [例三]如果要将网页上的某个图形设计成页面下载后显示在页面上，当鼠标放在它的上面时，该图像变成另一图形，那么可以通过______方法来设置。<!-- InstanceEndEditable -->
+        <div><!-- InstanceBeginEditable name="A" -->A.使用时间线<!-- InstanceEndEditable --></div>
+        <div da="1"><!-- InstanceBeginEditable name="B" -->B.“鼠标经过图像”命令<!-- InstanceEndEditable --></div>
+        <div><!-- InstanceBeginEditable name="C" -->C.将图形插入到表格中<!-- InstanceEndEditable --></div>
+        <div><!-- InstanceBeginEditable name="D" -->D.使用AP  Div元素与行为<!-- InstanceEndEditable --></div>
+      </div>
+      <br>
+      <!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+      <div class="timu"><!-- InstanceBeginEditable name="题目" -->[例四]在______中可以将文字设置为对齐方式，字体、字号和颜色。<!-- InstanceEndEditable -->
+        <div da="1"><!-- InstanceBeginEditable name="A" -->A.属性面板<!-- InstanceEndEditable --></div>
+        <div><!-- InstanceBeginEditable name="B" -->B.代码面板<!-- InstanceEndEditable --></div>
+        <div><!-- InstanceBeginEditable name="C" -->C.设计面板<!-- InstanceEndEditable --></div>
+        <div><!-- InstanceBeginEditable name="D" -->D.文件面板<!-- InstanceEndEditable --></div>
+      </div>
+      <br>
+      <!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+      <div class="timu"><!-- InstanceBeginEditable name="题目" -->[例五]按快捷键______可以在网站建一个新的空白页面。<!-- InstanceEndEditable -->
+        <div da="1"><!-- InstanceBeginEditable name="A" -->A.Ctrl+Shift+N<!-- InstanceEndEditable --></div>
+        <div><!-- InstanceBeginEditable name="B" -->B.Shift+A<!-- InstanceEndEditable --></div>
+        <div><!-- InstanceBeginEditable name="C" -->C.Ctrl+Shift+M<!-- InstanceEndEditable --></div>
+        <div><!-- InstanceBeginEditable name="D" -->D.Ctrl+N<!-- InstanceEndEditable --></div>
+      </div>
+      <br>
+      <!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+      <div class="timu"><!-- InstanceBeginEditable name="题目" -->[例六]左文字链接的时候，有______方法。<!-- InstanceEndEditable -->
+        <div><!-- InstanceBeginEditable name="A" -->A.4种<!-- InstanceEndEditable --></div>
+        <div><!-- InstanceBeginEditable name="B" -->B.3种<!-- InstanceEndEditable --></div>
+        <div da="1"><!-- InstanceBeginEditable name="C" -->C.5种<!-- InstanceEndEditable --></div>
+        <div><!-- InstanceBeginEditable name="D" -->D.6种<!-- InstanceEndEditable --></div>
+      </div>
+      <br>
+      <!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+      <div class="timu"><!-- InstanceBeginEditable name="题目" -->[例七]若要创建水平线，可以______中单击按钮。<!-- InstanceEndEditable -->
+        <div><!-- InstanceBeginEditable name="A" -->A.在代码面板<!-- InstanceEndEditable --></div>
+        <div><!-- InstanceBeginEditable name="B" -->B.在属性面板<!-- InstanceEndEditable --></div>
+        <div da="1"><!-- InstanceBeginEditable name="C" -->C.在常用面板<!-- InstanceEndEditable --></div>
+        <div><!-- InstanceBeginEditable name="D" -->D.在设计面板<!-- InstanceEndEditable --></div>
+      </div>
+      <br>
+      <!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+      <div class="timu"><!-- InstanceBeginEditable name="题目" -->[例八]插入图像的快捷键是<!-- InstanceEndEditable -->
+        <div><!-- InstanceBeginEditable name="A" -->A. Ctrl+ALT+A<!-- InstanceEndEditable --></div>
+        <div da="1"><!-- InstanceBeginEditable name="B" -->B. Ctrl+ALT+I<!-- InstanceEndEditable --></div>
+        <div><!-- InstanceBeginEditable name="C" -->C. Ctrl+ALT+L<!-- InstanceEndEditable --></div>
+        <div><!-- InstanceBeginEditable name="D" -->D. Ctrl+A<!-- InstanceEndEditable --></div>
+      </div>
+      <br>
+      <!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+      <div class="timu"><!-- InstanceBeginEditable name="题目" -->[例九]在网页中不论是加入图像文件或是超链接。<!-- InstanceEndEditable -->
+        <div><!-- InstanceBeginEditable name="A" -->A. 它们都是绝对路径<!-- InstanceEndEditable --></div>
+        <div da="1"><!-- InstanceBeginEditable name="B" -->B. 它们都是相对路径<!-- InstanceEndEditable --></div>
+        <div><!-- InstanceBeginEditable name="C" -->C. 它们都是路径<!-- InstanceEndEditable --></div>
+        <div><!-- InstanceBeginEditable name="D" -->D. 以上都不对<!-- InstanceEndEditable --></div>
+      </div>
+      <br>
+      <!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+      <div class="timu"><!-- InstanceBeginEditable name="题目" -->[例十]在Dreamwear CC中，站点分为<!-- InstanceEndEditable -->
+        <div><!-- InstanceBeginEditable name="A" -->A. 本地网和局域网<!-- InstanceEndEditable --></div>
+        <div da="1"><!-- InstanceBeginEditable name="B" -->B. 本地站点和远程站点<!-- InstanceEndEditable --></div>
+        <div><!-- InstanceBeginEditable name="C" -->C. 局域网站点和远程网站点<!-- InstanceEndEditable --></div>
+        <div><!-- InstanceBeginEditable name="D" -->D. 本地网和远程网<!-- InstanceEndEditable --></div>
+      </div>
+      <br>
+      <!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+      <div class="timu"><!-- InstanceBeginEditable name="题目" -->[例十一]Dreamwear  CC通过______面板管理站点？<!-- InstanceEndEditable -->
+        <div><!-- InstanceBeginEditable name="A" -->A.站点<!-- InstanceEndEditable --></div>
+        <div da="1"><!-- InstanceBeginEditable name="B" -->B.文件<!-- InstanceEndEditable --></div>
+        <div><!-- InstanceBeginEditable name="C" -->C.资源<!-- InstanceEndEditable --></div>
+        <div><!-- InstanceBeginEditable name="D" -->D.结果<!-- InstanceEndEditable --></div>
+      </div>
+      <br>
+      <!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+      <div class="timu"><!-- InstanceBeginEditable name="题目" -->[例十二]在Dreamwear  CC中，打开“站点”面板的快捷键是<!-- InstanceEndEditable -->
+        <div><!-- InstanceBeginEditable name="A" -->A.F2键<!-- InstanceEndEditable --></div>
+        <div><!-- InstanceBeginEditable name="B" -->B.F5键<!-- InstanceEndEditable --></div>
+        <div><!-- InstanceBeginEditable name="C" -->C.F7键<!-- InstanceEndEditable --></div>
+        <div da="1"><!-- InstanceBeginEditable name="D" -->D.F8键<!-- InstanceEndEditable --></div>
+      </div>
+      <br>
+      <!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+      <div class="timu"><!-- InstanceBeginEditable name="题目" -->[例十三]设置页面属性包括<!-- InstanceEndEditable -->
+        <div da="1"><!-- InstanceBeginEditable name="A" -->A.改变页面标签<!-- InstanceEndEditable --></div>
+        <div><!-- InstanceBeginEditable name="B" -->B.段落设置<!-- InstanceEndEditable --></div>
+        <div><!-- InstanceBeginEditable name="C" -->C.选择颜色<!-- InstanceEndEditable --></div>
+        <div da="1"><!-- InstanceBeginEditable name="D" -->D.添加背景图案<!-- InstanceEndEditable --></div>
+      </div>
+      <br>
+      <!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+      <div class="timu"><!-- InstanceBeginEditable name="题目" -->[例十四]CSS可能改变的性质有<!-- InstanceEndEditable -->
+        <div da="1"><!-- InstanceBeginEditable name="A" -->A.字体<!-- InstanceEndEditable --></div>
+        <div da="1"><!-- InstanceBeginEditable name="B" -->B.文字间的空间<!-- InstanceEndEditable --></div>
+        <div da="1"><!-- InstanceBeginEditable name="C" -->C.列表<!-- InstanceEndEditable --></div>
+        <div da="1"><!-- InstanceBeginEditable name="D" -->D.颜色<!-- InstanceEndEditable --></div>
+      </div>
+      <br>
+      <!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+      <div class="timu"><!-- InstanceBeginEditable name="题目" -->[例十五]以下说法正确的是<!-- InstanceEndEditable -->
+        <div><!-- InstanceBeginEditable name="A" -->A.插入到Dreamwear CC中的图像不能再用外部图像编辑器编辑<!-- InstanceEndEditable --></div>
+        <div da="1"><!-- InstanceBeginEditable name="B" -->B.可以在Dreamwear  CC中直接设置图像的亮度和对比度<!-- InstanceEndEditable --></div>
+        <div><!-- InstanceBeginEditable name="C" -->C.在Dreamwear  CC中不能对图像进行裁剪<!-- InstanceEndEditable --></div>
+        <div><!-- InstanceBeginEditable name="D" -->D.以上都不对<!-- InstanceEndEditable --></div>
+      </div>
+      <br>
+      <!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+      <div class="timu"><!-- InstanceBeginEditable name="题目" -->[例十六]以下关于优化图像说法不正确的是<!-- InstanceEndEditable -->
+        <div><!-- InstanceBeginEditable name="A" -->A.可以给图片增加提示<!-- InstanceEndEditable --></div>
+        <div><!-- InstanceBeginEditable name="B" -->B.可以设置图文混排<!-- InstanceEndEditable --></div>
+        <div da="1"><!-- InstanceBeginEditable name="C" -->C.不可以给图像描边<!-- InstanceEndEditable --></div>
+        <div><!-- InstanceBeginEditable name="D" -->D.可以改变图像的亮度和对比度<!-- InstanceEndEditable --></div>
+      </div>
+      <br>
+      <!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+      <div class="timu"><!-- InstanceBeginEditable name="题目" -->[例十七]下列关于图像的编辑说法不正确的是<!-- InstanceEndEditable -->
+        <div><!-- InstanceBeginEditable name="A" -->A.图像可以改变大小<!-- InstanceEndEditable --></div>
+        <div><!-- InstanceBeginEditable name="B" -->B.图像可以改变位置<!-- InstanceEndEditable --></div>
+        <div><!-- InstanceBeginEditable name="C" -->C.可以裁剪图像<!-- InstanceEndEditable --></div>
+        <div da="1"><!-- InstanceBeginEditable name="D" -->D.可以改变图像颜色<!-- InstanceEndEditable --></div>
+      </div>
+      <br>
+      <!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+      <div class="timu"><!-- InstanceBeginEditable name="题目" -->[例十八]占位图的名称必须以字母开头，且只能包含字母和______<!-- InstanceEndEditable -->
+        <div da="1"><!-- InstanceBeginEditable name="A" -->A. 数字<!-- InstanceEndEditable --></div>
+        <div><!-- InstanceBeginEditable name="B" -->B. 汉字<!-- InstanceEndEditable --></div>
+        <div><!-- InstanceBeginEditable name="C" -->C. 下划线<!-- InstanceEndEditable --></div>
+        <div><!-- InstanceBeginEditable name="D" -->D. 空格<!-- InstanceEndEditable --></div>
+      </div>
+      <br>
+      <!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+      <div class="timu"><!-- InstanceBeginEditable name="题目" -->[例十九]以下是Dreamwear  CC热点工具的是______<!-- InstanceEndEditable -->
+        <div><!-- InstanceBeginEditable name="A" -->A.矩形热点工具<!-- InstanceEndEditable --></div>
+        <div><!-- InstanceBeginEditable name="B" -->B.圆形热点工具<!-- InstanceEndEditable --></div>
+        <div><!-- InstanceBeginEditable name="C" -->C.多边形热点工具<!-- InstanceEndEditable --></div>
+        <div da="1"><!-- InstanceBeginEditable name="D" -->D.以上三个都是<!-- InstanceEndEditable --></div>
+      </div>
+      <br>
+      <!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+      <div class="timu"><!-- InstanceBeginEditable name="题目" -->[例二十]在HTML源代码中，图像的属性用______标记来定义。<!-- InstanceEndEditable -->
+        <div><!-- InstanceBeginEditable name="A" -->A.picture<!-- InstanceEndEditable --></div>
+        <div da="1"><!-- InstanceBeginEditable name="B" -->B.img<!-- InstanceEndEditable --></div>
+        <div><!-- InstanceBeginEditable name="C" -->C.pic<!-- InstanceEndEditable --></div>
+        <div><!-- InstanceBeginEditable name="D" -->D.image<!-- InstanceEndEditable --></div>
+      </div>
+      <br>
+      <!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+      <div class="timu"><!-- InstanceBeginEditable name="题目" -->[例二十一]常用的网页图像格式有______和______<!-- InstanceEndEditable -->
+        <div><!-- InstanceBeginEditable name="A" -->A.gif,tiff<!-- InstanceEndEditable --></div>
+        <div><!-- InstanceBeginEditable name="B" -->B.tiff,jpg<!-- InstanceEndEditable --></div>
+        <div da="1"><!-- InstanceBeginEditable name="C" -->C.gif,jpg<!-- InstanceEndEditable --></div>
+        <div><!-- InstanceBeginEditable name="D" -->D.tiff,pngs<!-- InstanceEndEditable --></div>
+      </div>
+      <!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry --><br>
+      <!-- InstanceEndRepeatEntry --><!-- InstanceEndRepeat -->
+      </div>
+
+    
+</body>
+
+
+<!-- InstanceEnd --></html>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script>
+    $(document).ready(function () {
+
+        $(".timu div").click(function () {
+            setTimeout(function() {
+                $(".ck").hide()
+            }, 1500);
+            // 判断.timu div内是否有标记da=1
+            var da = $(this).attr("da");
+            // 判断是否有da标记
+            var dd = $(this).attr("dd");
+            // 如果有
+            if (dd == undefined) {
+                // 如果没有
+                if (da != undefined) {
+                    // 若有标记图片替换文字替换回答正确
+                    $(".ck span").text("回答正确");
+                    $(".ck img").attr("src", "./gz.gif");
+                    $(this).css("background-color", "blue")
+                    // 若无标记图片文字替换为回答错误 回答错误
+                    add(".dui")
+                } else {
+                    $(".ck span").text("回答错误");
+                    $(".ck img").attr("src", "./2.gif");
+                    $(this).css("background-color", "red")
+                    add(".cuo")
+                }
+
+
+                // 点击后给.timu div 添加dd标记
+                $(this).attr("dd", "1");
+                // $(".ck").show();
+            }
+            // 函数
+            function add(idtxt) {
+                var a = parseInt($(idtxt).text());
+                $(idtxt).text(a + 1);
+				push();
+
+            }
+
+
+            // 点击选项后显示
+            $(".ck").show();
+        })
+		function push()
+		{
+			var dui = $(".dui").text();
+			var cuo = $(".cuo").text();
+			$.post("./update.php",{
+				dui:dui,
+				cuo:cuo
+				},function(data){
+					console.log(data);
+					
+			},'json');
+		}
+
+    })
+</script>

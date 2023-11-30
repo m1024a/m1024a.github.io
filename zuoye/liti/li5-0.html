@@ -1,0 +1,315 @@
+<!DOCTYPE html><html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>例1</title>
+<style>
+        .timu {
+            /* div颜色 */
+            background-color: blueviolet;
+            /* 内边距 */
+            padding: 10px;
+            /* 圆角 */
+            border-radius: 10px;
+            /* 字体大小 */
+            font-size: 200%;
+            /* 字体加粗 */
+            font-weight: bolder;
+            /* 鼠标样式（选中） */
+            cursor: pointer;
+        }
+
+        .timu div {
+            color: aqua;
+            background-color: brown;
+            padding: 15px;
+            margin-top: 10px;
+            border-radius: 15px;
+
+        }
+
+        .timu div:hover {
+            color: black;
+            background-color: aliceblue;
+            /* 鼠标样式（十字光标） */
+            cursor: crosshair;
+        }
+
+         .timu .daan {
+            background-color: brown;
+            color: yellow;
+            display: none;（弃用）
+        } */
+
+        body {
+            font-family: LXGW WenKai;
+        }
+
+        .bac {
+            background-color: aqua;
+            padding: 20px;
+        }
+
+        .ck {
+            color: aliceblue;
+            /* 定位方式 */
+            position: fixed;
+            background-color: cornflowerblue;
+            width: 200px;
+            height: 200px;
+            font-size: 150%;
+            border-radius: 8px;
+            left: 45%;
+            top: 45%;
+            font-weight: bold;
+            /* 整体放大 */
+            transform: scale(1.5);
+            /* 默认为打开 设置为关闭 */
+            display: none;
+        }
+
+        .ck .bt {
+            color: black;
+            width: 200px;
+            background-color: darkgray;
+            border-radius: 8px;
+
+        }
+
+        .ck .bt button {
+            float: right;
+            width: 25px;
+            height: 25px;
+            margin-top: 4px;
+            margin-right: 4px;
+        }
+
+        /* 替换图片的属性 */
+        .ck img {
+            width: 180px;
+            height: 120px;
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-left: 10px;
+            border-radius: 5px;
+            /* 图片透明度 */
+            filter: opacity(90%)
+        }
+
+        .jishu {
+            color: rgb(255, 255, 255);
+            background-color: rgb(107, 7, 7);
+            position: fixed;
+            width: 200px;
+            height: 90px;
+            border-radius: 10px;
+            padding: 5px;
+            font-size: 200%;
+            font-weight: bolder;
+            right: 0;
+        }
+    </style>
+    <link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-webfont@1.1.0/lxgwwenkai-regular.css" />
+</head>
+
+<body>
+    <div class="jishu">
+        <div>答对：<span class="dui">0</span>次</div>
+        <div>答错：<span class="cuo">0</span>次</div>
+    </div>
+    <div class="ck">
+        <div class="bt">标题<button>x</button></div>
+        <span></span>
+        <img src="gz.gif" alt="">
+    </div>
+<h1>一、单选题</h1>
+    <div class="timu">
+        【例1】行为是_____和______的组合。
+        <div da="1">A.事件</div>
+        <div>B.页面</div>
+        <div da="1">C.动作</div>
+        <div>D.框架</div>
+    </div>
+    <br>
+    <div class="timu">
+        【例2】动态HTML事件“OnMouseOver”表示
+        <div da="1">A.用户将鼠标移动到页面元素之上时触发该事件</div>
+        <div>B.用户移动鼠标时触发该事件</div>
+        <div>C.用户释放鼠标左键时触发该事件</div>
+        <div>D.用户按下鼠标左键时触发该事件</div>
+    </div>
+    <br>
+    <div class="timu">
+        【例3】快捷键______可以使面板组显示“行为”面板
+        <div>A.Shift+F7</div>
+        <div da="1">B.Shift+F4</div>
+        <div>C.Ctrl+F3</div>
+        <div>D.Ctrl+F7</div>
+    </div>
+    <br>
+    <div class="timu">
+        1.下列哪一个不是访问者对网页的基本操作
+        <div>A.onMouseOver</div>
+        <div>B.onMouseOut</div>
+        <div>C.onClick</div>
+        <div da="1">D.onLoad</div>
+    </div>
+    <br>
+    <div class="timu">
+        2.下列关于“行为”面板的说法中错误的是？
+        <div>A.动作（+）是一个菜单列表，其中包含可以附加到当前所选元素的多个动作</div>
+        <div>B.删除（-）是从行为列表中删除所选的事件和动作</div>
+        <div>C.上下箭头按钮是将特定事件的所选动作在行为列表中向上或向下移动，以便安定义的顺序执行</div>
+        <div da="1">D.“行为”通道不是在时间轴特定帧处执行的行为的通道</div>
+    </div>
+    <br>
+    <div class="timu">
+        3.下列关于“行为”的说法不正确的是？
+        <div da="1">A.行为即是事件，事件就是行为</div>
+        <div>B.行为是事件和动作组合</div>
+        <div>C.行为是Dreamweaver CC预置的JavaScript程序库</div>
+        <div>D.通过行为可以改变对象属性、打开浏览器和播放音乐</div>
+    </div>
+    <br>
+    <div class="timu">
+        4.下列哪种元素不能插入层中
+        <div>A.层</div>
+        <div da="1">B.框架</div>
+        <div>C.表格</div>
+        <div>D.表单及各种表单对象</div>
+    </div>
+    <br>
+    <div class="timu">
+        5.下列关于 Dreamweaver CC中事件的说法中，不正确的是？
+        <div>A.事件是由浏览器为每个页面元素定义的</div>
+        <div da="1">B.事件只能由系统引发，不能自己引发</div>
+        <div>C.onAbort事件是当终止正在打开的页面时引发</div>
+        <div>D.事件可以被自己引发</div>
+    </div>
+    <br>
+    <div class="timu">
+        6.使用&lt;marquee&gt;标签并把运动方向设置为向上。参数direction=
+        <div>A.left</div>
+        <div>B.right</div>
+        <div da="1">C.up</div>
+        <div>D.down</div>
+    </div>
+    <br>
+    <div class="timu"> 
+        7.网页中实现滚动字幕效果，应对滚动文字添加_____标记
+        <div>A.&lt;body&gt;&lt;/body&gt;</div>
+        <div>B.&lt;table&gt;&lt;/table&gt;</div>
+        <div da="1">C.&lt;marquee&gt;&lt;/marquee&gt;</div>
+        <div>D.&lt;div&gt;&lt;/div&gt;</div>                 
+    </div>
+   <br>
+    <div class="timu">
+        8.网页打开时出现自动飞入的文字效果，应使用的触发事件是
+        <div>A.单击</div>
+        <div>B.双击</div>
+        <div>C.鼠标悬停</div>
+        <div da="1">D.网页加载</div>
+    </div>
+    <br>
+    <div class="timu">
+        9.当鼠标移动到文字链接上时显示一个隐藏层，这个动作的触发事件应该是
+        <div>A.onClick</div>
+        <div>B.onDblClick</div>
+        <div da="1">C.OnMouseOver</div>
+        <div>D.OnLink</div>               
+    </div>
+   <br>
+    <div class="timu">     
+        10._____事件是鼠标单击了图像链接或图像映射这样的特定元素后产生的事件
+        <div>A.OndbClick</div>
+        <div da="1">B.OnClick</div>
+        <div>C.OnMouseOver</div>
+        <div>D.OnLink</div>                
+    </div>
+   <br>
+    <div class="timu">
+        11.下列事件中表示打开网页的是
+        <div da="1">A.Onload</div>
+        <div>B.Unonload</div>
+        <div>C.Onhelp</div>
+        <div>D.Onkeyup</div>                  
+</div>
+   <br>
+    <div class="timu">
+    12.动态HTML事件“OnMouseOver”表示
+         <div>A.用户将鼠标移动到页面元素之上时触发该事件</div>
+         <div>B.用户移动鼠标时触发该事件</div>
+         <div da="1">C.用户释放鼠标左键时触发该事件</div>
+         <div>D.用户按下鼠标左键时触发该事件</div>               
+    </div>
+    <h1>三、问答题</h1>    <div class="timu">
+    <p>1.简述行为的概念及其特点</p>
+    <div class="da" >&nbsp;&nbsp;&nbsp;&nbsp;将JavaScript代码放置在文档中以允许访问者与Web页进行交互，从而以多种方式更改页或引起某些任务的执行。行为是事件和由该事件触发的动作的组合</div></div>
+     <br>  <div class="timu">
+ <p>2.简述什么是事件</p>
+<div  >&nbsp;&nbsp;&nbsp;&nbsp;所谓事件是指访问网页的用户在网页中所进行的操作，如鼠标单击，双击等；通过响应事件而产生的某个响应或操作就是行为</div> </div>>
+</body>
+
+
+<!-- InstanceEnd --></html>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script>
+    $(document).ready(function () {
+
+        $(".timu div").click(function () {
+            setTimeout(function() {
+                $(".ck").hide()
+            }, 1500);
+            // 判断.timu div内是否有标记da=1
+            var da = $(this).attr("da");
+            // 判断是否有da标记
+            var dd = $(this).attr("dd");
+            // 如果有
+            if (dd == undefined) {
+                // 如果没有
+                if (da != undefined) {
+                    // 若有标记图片替换文字替换回答正确
+                    $(".ck span").text("回答正确");
+                    $(".ck img").attr("src", "./gz.gif");
+                    $(this).css("background-color", "blue")
+                    // 若无标记图片文字替换为回答错误 回答错误
+                    add(".dui")
+                } else {
+                    $(".ck span").text("回答错误");
+                    $(".ck img").attr("src", "./2.gif");
+                    $(this).css("background-color", "red")
+                    add(".cuo")
+                }
+
+
+                // 点击后给.timu div 添加dd标记
+                $(this).attr("dd", "1");
+                // $(".ck").show();
+            }
+            // 函数
+            function add(idtxt) {
+                var a = parseInt($(idtxt).text());
+                $(idtxt).text(a + 1);
+				push();
+
+            }
+
+
+            // 点击选项后显示
+            $(".ck").show();
+        })
+		function push()
+		{
+			var dui = $(".dui").text();
+			var cuo = $(".cuo").text();
+			$.post("./update.php",{
+				dui:dui,
+				cuo:cuo
+				},function(data){
+					console.log(data);
+					
+			},'json');
+		}
+
+    })
+</script>

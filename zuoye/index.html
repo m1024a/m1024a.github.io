@@ -1,31 +1,74 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>作业</title>
-<style type="text/css">
-.ab a{
+    <link rel="stylesheet" href="style.css">
+    <script src="./jquery.js"></script>
+    <script src="script.js"></script>
+    <style>
+        body{
+	background-image: url(./2.jpg);
+	background-attachment: fixed;
+        }
+		.ab a{
 	color: #000000;
 	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
 	font-style: oblique;
 	font-weight: bolder;
 	font-size: 182%;
 	text-decoration: none;
+	text-align: center;
 }
 .ab p {
 	text-align: center;
 }
-</style>
+.ab{
+	width: 800px;
+	height: 500px;
+	/* [disabled]min-width: 0px; */
+	z-index: 0;
+	}
+    </style>
+    <link rel="stylesheet" href="https://npm.elemecdn.com/aplayer@1.10.1/dist/APlayer.min.css">
+<script src="https://npm.elemecdn.com/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    <!-- require MetingJS -->
+<script src="https://npm.elemecdn.com/meting@2.0.1/dist/Meting.min.js"></script>
 </head>
 <body>
-<div class="ab"> 
-  <p><a href="./1-1/index.html">1-1 Web的相关概念</a></p>
-  <p>
-    <a href="./1-2/index.html">1-2 网页与网站</a>    </p>
-  <p><a href="./1-1/ceshitexiao.html">测试效果</a>    </p>
-  <p><a href="./liti/li1-1.html">例题</a></p>
+<div class="main">
+    <div class="head">
+        <div class="login-in">
+            知识
+        </div>
+        <div class="login-up">
+            例题
+        </div>
+    </div>
+    <div class="body">
+        <div class="front">
+        <div class="ab"> 
   <p><a href="2-0/kuangjia/untitled.html">2-0框架</a></p>
-  </div>
+  <p><a href="3-0/index.html">3-0网页元素的插入与设置</a></p>
+  <p><a href="4-0/index.html">4-0 超链接</a></p>
+  <p><a href="5-0/index.html">5-0 行为</a></p>
+  <p><a href="6-0/index.html">CSS层叠样式表</a></p>  
+  <p><a href="7-0/index.html">PHP</a></p>     
+   
+     </div></div>
+        <div class="back">
+<div class="ab"> 
+  <p><a href="./liti/li1-1.html">项目一例题</a></p>
+  <p><a href="liti/li2-0.html">项目二例题</a></p>
+  <p><a href="liti/li3-0.html">项目三例题</a></p>
+  <p><a href="liti/li4-0.html">项目四例题</a></p>
+  <p><a href="liti/li5-0.html">项目五 例题</a></p>
+  <p><a href="liti/li6-0.html">项目六 例题</a></p>
+
+  </div>        </div>
+    </div>
+</div>
+    <meting-js fixed="true" autoplay="false" theme="#409EFF" list-folded="true" auto="https://music.163.com/#/my/m/music/playlist?id=8421446550"></meting-js>
+
 </body>
 </html>
